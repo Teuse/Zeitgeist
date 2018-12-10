@@ -2,14 +2,17 @@ import ReSwift
 
 struct AppState: StateType
 {
+    var triggerState = TriggerState()
+    
     var currentRecord: Record? {
         return DBAccess.shared.getToday()
     }
     
     // --------------------------------------------------------------------------------
     
-    static func appReducer(action: Action, state: AppState?) -> AppState {
+    static func reducer(action: Action, state: AppState?) -> AppState {
         var state = state ?? AppState()
+        state.triggerState = TriggerState.reducer(action: action, state: state.triggerState)
         
         switch action {
 //        case is ReSwiftInit:

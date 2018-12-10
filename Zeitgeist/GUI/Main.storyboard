@@ -233,9 +233,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="KEB-jR-qfC" kind="show" id="AQJ-tP-xIt"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -248,44 +245,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35D-N3-9C8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="1128"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="JTO-Hn-6DM">
-            <objects>
-                <viewController id="KEB-jR-qfC" customClass="MapViewController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0pY-o8-37N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-sC-lY2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="x9P-k2-nVe" appends="YES" id="C41-k0-lS8"/>
-                                </connections>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ktL-sC-lY2" firstAttribute="top" secondItem="FQO-HT-xS5" secondAttribute="top" id="29Y-Zj-zDU"/>
-                            <constraint firstItem="ktL-sC-lY2" firstAttribute="leading" secondItem="FQO-HT-xS5" secondAttribute="leading" id="2CU-i3-Q3F"/>
-                            <constraint firstItem="FQO-HT-xS5" firstAttribute="bottom" secondItem="ktL-sC-lY2" secondAttribute="bottom" id="ycB-IH-FOR"/>
-                            <constraint firstItem="FQO-HT-xS5" firstAttribute="trailing" secondItem="ktL-sC-lY2" secondAttribute="trailing" id="ypD-pb-NH7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FQO-HT-xS5"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="ktL-sC-lY2" id="5aM-mh-sEu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fWF-zy-Y5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="x9P-k2-nVe">
-                    <connections>
-                        <action selector="addRegion:" destination="KEB-jR-qfC" id="T6R-b4-4vk"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1902" y="1128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uJB-Hd-YRP">

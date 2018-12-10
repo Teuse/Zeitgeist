@@ -6,7 +6,7 @@ import ReSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appStore = Store<AppState>(reducer: AppState.appReducer, state: nil, middleware: [loggingMiddleware])
+    var appStore = Store<AppState>(reducer: AppState.reducer, state: nil, middleware: [loggingMiddleware])
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

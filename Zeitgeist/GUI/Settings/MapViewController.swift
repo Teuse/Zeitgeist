@@ -6,7 +6,6 @@ import CoreLocation
 class MapViewController: UIViewController
 {
     let locationManager = CLLocationManager()
-//    let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addRegion(_:)))
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -17,10 +16,9 @@ class MapViewController: UIViewController
         subscribe(self)
         mapView.showsUserLocation = true
         mapView.delegate = self
-//        mapView.addGestureRecognizer(longPressGesture)
         
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
     }
     
