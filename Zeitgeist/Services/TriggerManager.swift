@@ -9,15 +9,15 @@ class TriggerManager
       return TimeTriggerProcessor() { [weak self] in
          self?.print()
       }
-   }
+   }()
    private lazy var endTimeTrigger: TimeTriggerProcessor = {
       return TimeTriggerProcessor() { [weak self] in
          self?.print()
       }
-   }
+   }()
 
    func print() {
-      print("start timer trigger")
+      
    }
 
    // --------------------------------------------------------------------------------
@@ -33,8 +33,8 @@ class TriggerManager
 
    private func setup()
    {
-      store.subscribe(self) { subscriber in
-         subscriber.select { $0.triggerState }
+      store.subscribe(self) { subcription in
+         subcription.select { state in state.triggerState }
       }
 
       timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block:
@@ -45,17 +45,19 @@ class TriggerManager
 
    private func runLoop()
    {
-
+      startTimeTrigger.process()
    }
 }
 
 extension TriggerManager: StoreSubscriber
 {
-   func newState(triggerState: TriggerState)
+   func newState(state: TriggerState)
    {
-      if triggerState.startTimeTrigger.enabled {
-         startTimeTrigger.process()
-      }
+      startTimeTrigger.enabled = state.startTimeTrigger.enabled
+      startTimeTrigger.setTime(state.startTimeTrigger.time)
 
+      endTimeTrigger.enabled = state.endTimeTrigger.enabled
+      startTimeTrigger.setTime(state.endTimeTrigger.time)
    }
 }
+
