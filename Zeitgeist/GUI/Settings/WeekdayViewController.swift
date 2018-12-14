@@ -26,6 +26,7 @@ extension WeekdayViewController: StoreSubscriber
    func newState(state: AppState)
    {
       weekTrigger = state.triggerState.weekdayTrigger
+      tableView.reloadData()
    }
 }
 

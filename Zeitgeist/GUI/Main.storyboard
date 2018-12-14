@@ -18,15 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-TC-51Z">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-TC-51Z">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="k8v-Oz-3qR" kind="embed" id="Msc-DN-WEa"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y8v-TC-51Z" firstAttribute="trailing" secondItem="HEz-9s-0mE" secondAttribute="trailing" id="41B-ve-MDi"/>
+                            <constraint firstItem="Y8v-TC-51Z" firstAttribute="bottom" secondItem="HEz-9s-0mE" secondAttribute="bottom" id="Hxi-EI-J7q"/>
+                            <constraint firstItem="Y8v-TC-51Z" firstAttribute="top" secondItem="7gW-t5-EU6" secondAttribute="top" id="Mx1-1t-Wtd"/>
+                            <constraint firstItem="Y8v-TC-51Z" firstAttribute="leading" secondItem="HEz-9s-0mE" secondAttribute="leading" id="heg-ei-bLi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HEz-9s-0mE"/>
                     </view>
                 </viewController>
