@@ -1,5 +1,16 @@
 import Foundation
 
+struct TimeFrame {
+   var start = Time()
+   var end = Time()
+
+   init() {}
+   init(startHour: Int, endHour: Int) {
+      self.start.hour = startHour
+      self.end.hour = endHour
+   }
+}
+
 struct Time {
    var hour:Int = 0
    var minute:Int = 0

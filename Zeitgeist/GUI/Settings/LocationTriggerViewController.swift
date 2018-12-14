@@ -3,44 +3,64 @@ import ReSwift
 
 class LocationTriggerViewController: UIViewController
 {
-   @IBOutlet weak var timeSelectionButton: UIButton!
+   private var timeSelectionVC: TimeSelectionViewController?
+
+   @IBOutlet weak var startTimeButton: UIButton!
+   @IBOutlet weak var endTimeButton: UIButton!
+   @IBOutlet weak var mapViewContainer: UIView!
    
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-      timeSelectionButton.titleLabel?.text = ""
-        subscribe(self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool)
-    {
-        super.viewWillDisappear(animated)
-        unsubscribe(self)
-    }
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      subscribe(self) { subcription in
+         subcription.select { state in state.locationTriggerState }
+      }
+   }
+
+   override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      unsubscribe(self)
+   }
+
+   override func viewDidLayoutSubviews() {
+      startTimeButton.titleLabel?.text = ""
+      endTimeButton.titleLabel?.text = ""
+   }
    
    @IBAction func onTimeSelectionButton(_ sender: UIButton)
    {
-      openTimeSelectionView()
+      dispatch(action: ToggleSelectionViewAction(isStartTime: sender == startTimeButton))
    }
 }
 
 extension LocationTriggerViewController: StoreSubscriber
 {
-    func newState(state: AppState)
-    {
-    }
+   func newState(state: LocationTriggerState)
+   {
+      if state.isTimeSelectionViewShown {
+         openTimeSelectionView(forStartTime: state.isStartTimeSelector)
+      } else {
+         closeTimeSelectionView()
+      }
+   }
 }
 
 extension LocationTriggerViewController
 {
-   private func openTimeSelectionView()
+   private func openTimeSelectionView(forStartTime: Bool)
    {
+      guard timeSelectionVC == nil else { return }
       let storyboard = UIStoryboard(name: "Settings", bundle: nil)
-      let controller = storyboard.instantiateViewController(withIdentifier: "TimeSelectionViewController")
-      navigationController?.pushViewController(controller, animated: true)
+      timeSelectionVC = storyboard.instantiateViewController(withIdentifier: "TimeSelectionViewController") as? TimeSelectionViewController
+      timeSelectionVC?.isStartTime = forStartTime
+      if let controller = timeSelectionVC {
+         view.addSubview(controller.view)
+         controller.view.frame = mapViewContainer.frame
+      }
    }
    
-   private func closeTimeSelectionView() {
-      
+   private func closeTimeSelectionView()
+   {
+      timeSelectionVC?.view.removeFromSuperview()
+      timeSelectionVC = nil
    }
 }

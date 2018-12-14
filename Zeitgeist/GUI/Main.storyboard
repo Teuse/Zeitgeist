@@ -274,4 +274,5 @@
         <image name="PauseButton.png" width="55" height="55"/>
         <image name="StartButton.png" width="55" height="55"/>
     </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

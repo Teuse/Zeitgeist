@@ -33,9 +33,7 @@ class TriggerManager
 
    private func setup()
    {
-      store.subscribe(self) { subcription in
-         subcription.select { state in state.triggerState }
-      }
+      store.subscribe(self) 
 
       timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block:
          {[weak self] _ in self?.runLoop() })
@@ -51,13 +49,13 @@ class TriggerManager
 
 extension TriggerManager: StoreSubscriber
 {
-   func newState(state: TriggerState)
+   func newState(state: AppState)
    {
-      startTimeTrigger.enabled = state.startTimeTrigger.enabled
-      startTimeTrigger.setTime(state.startTimeTrigger.time)
+//      startTimeTrigger.enabled = state.startTimeTrigger.enabled
+//      startTimeTrigger.setTime(state.startTimeTrigger.time)
 
-      endTimeTrigger.enabled = state.endTimeTrigger.enabled
-      startTimeTrigger.setTime(state.endTimeTrigger.time)
+//      endTimeTrigger.enabled = state.endTimeTrigger.enabled
+//      startTimeTrigger.setTime(state.endTimeTrigger.time)
    }
 }
 

@@ -75,7 +75,9 @@ class MapViewController: UIViewController
     
     private func showRestrictedLocationServiceWarning()
     {
-        
+      let alert = UIAlertController(title: "Location Access Restricted", message: "With restricted access, it is not possible to use this trigger while app is closed!", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+      present(alert, animated: true, completion: nil)
     }
 }
 
