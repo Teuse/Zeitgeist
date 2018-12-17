@@ -3,6 +3,7 @@ import ReSwift
 struct AppState: StateType
 {
    var locationTriggerState = LocationTriggerState()
+   var timeTriggerState = TimeTriggerState()
    var weekdayTriggerState = WeekdayTriggerState()
 
    var currentRecord: Record? {
@@ -14,6 +15,7 @@ struct AppState: StateType
    static func reducer(action: Action, state: AppState?) -> AppState {
       var state = state ?? AppState()
       state.locationTriggerState = LocationTriggerState.reducer(action: action, state: state.locationTriggerState)
+      state.timeTriggerState = TimeTriggerState.reducer(action: action, state: state.timeTriggerState)
       state.weekdayTriggerState = WeekdayTriggerState.reducer(action: action, state: state.weekdayTriggerState)
 
       switch action {

@@ -14,7 +14,7 @@ class SettingsViewController: UITableViewController
    
    let settings = [
       Setting(name: "Location Trigger", storyboardId: "LocationTriggerVC"),
-      Setting(name: "Time Trigger", storyboardId: "LocationTriggerVC"),
+      Setting(name: "Time Trigger", storyboardId: "TimeTriggerVC"),
       Setting(name: "Weekdays", storyboardId: "WeekdayVC"),
       ]
    

@@ -36,7 +36,7 @@ class TimeSelectionViewController: UIViewController
       timeFrame.start.hour = startComp.hour ?? 0
       timeFrame.start.minute = startComp.minute ?? 0
 
-      let endComp = Calendar.current.dateComponents([.hour, .minute], from: startPicker.date)
+      let endComp = Calendar.current.dateComponents([.hour, .minute], from: endPicker.date)
       timeFrame.end.hour = endComp.hour ?? 23
       timeFrame.end.minute = endComp.minute ?? 0
 

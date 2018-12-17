@@ -10,6 +10,9 @@
 		332CE7D521C3DB1B0056B821 /* LocationTriggerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D421C3DB1B0056B821 /* LocationTriggerActions.swift */; };
 		332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */; };
 		332CE7D921C3E0380056B821 /* LocationTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D721C3E0380056B821 /* LocationTriggerState.swift */; };
+		33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */; };
+		33BF448F21C7CF930019FB7E /* TimeTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */; };
+		33BF449121C7D0EF0019FB7E /* TimeTriggerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF449021C7D0EE0019FB7E /* TimeTriggerActions.swift */; };
 		8A3E864521BA557500AD9E38 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864421BA557500AD9E38 /* MapViewController.swift */; };
 		8A3E864921BA969800AD9E38 /* TimeTriggerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */; };
 		8A3E864B21BA96A200AD9E38 /* LocationTriggerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */; };
@@ -71,6 +74,9 @@
 		332CE7D421C3DB1B0056B821 /* LocationTriggerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerActions.swift; sourceTree = "<group>"; };
 		332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayTriggerState.swift; sourceTree = "<group>"; };
 		332CE7D721C3E0380056B821 /* LocationTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationTriggerState.swift; sourceTree = "<group>"; tabWidth = 3; };
+		33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
+		33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerState.swift; sourceTree = "<group>"; };
+		33BF449021C7D0EE0019FB7E /* TimeTriggerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerActions.swift; sourceTree = "<group>"; };
 		8A3E864421BA557500AD9E38 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTriggerProcessor.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 				8A80EE7421B84C5900CAE80C /* LocationTriggerViewController.swift */,
 				8A3E864421BA557500AD9E38 /* MapViewController.swift */,
 				8ACF786921C2CBF800474F09 /* TimeSelectionViewController.swift */,
+				33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */,
 				8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */,
 			);
 			path = Settings;
@@ -246,6 +253,7 @@
 			children = (
 				8A8AFFEC21B727F6001E1C6D /* Actions.swift */,
 				332CE7D421C3DB1B0056B821 /* LocationTriggerActions.swift */,
+				33BF449021C7D0EE0019FB7E /* TimeTriggerActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 				8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */,
 				8ACC3D7621BD4E14008B0F8D /* Time.swift */,
 				332CE7D721C3E0380056B821 /* LocationTriggerState.swift */,
+				33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */,
 				332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */,
 				8ACC3D7821BD4E4E008B0F8D /* Week.swift */,
 			);
@@ -483,8 +492,10 @@
 				332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */,
 				8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */,
 				8A8AFFBA21B703D7001E1C6D /* Zeitgeist.xcdatamodeld in Sources */,
+				33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */,
 				8A8AFFDD21B7101A001E1C6D /* UIViewControllerExtension.swift in Sources */,
 				8A8AFFD921B70D96001E1C6D /* AppState.swift in Sources */,
+				33BF449121C7D0EF0019FB7E /* TimeTriggerActions.swift in Sources */,
 				8A8AFFED21B727F6001E1C6D /* Actions.swift in Sources */,
 				8A8AFFB821B703D7001E1C6D /* RootViewController.swift in Sources */,
 				8A8AFFC921B70981001E1C6D /* HistoryViewController.swift in Sources */,
@@ -496,6 +507,7 @@
 				8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */,
 				332CE7D921C3E0380056B821 /* LocationTriggerState.swift in Sources */,
 				8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */,
+				33BF448F21C7CF930019FB7E /* TimeTriggerState.swift in Sources */,
 				8A8AFFDB21B70EE6001E1C6D /* LoggingMiddleware.swift in Sources */,
 				8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */,
 				8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */,

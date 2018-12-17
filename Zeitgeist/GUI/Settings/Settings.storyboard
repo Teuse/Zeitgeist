@@ -152,7 +152,7 @@
             <objects>
                 <viewController storyboardIdentifier="WeekdayVC" id="Rn1-NQ-Chu" customClass="WeekdayViewController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GX2-io-Nlp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L73-Dn-1Ij">
@@ -184,7 +184,7 @@
                         <viewLayoutGuide key="safeArea" id="INT-jP-h3U"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <outlet property="tableView" destination="L73-Dn-1Ij" id="s0Y-X2-8Ak"/>
                     </connections>
@@ -192,6 +192,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2k-1z-waQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1902" y="1819"/>
+        </scene>
+        <!--Time Trigger View Controller-->
+        <scene sceneID="AeH-Ai-bX8">
+            <objects>
+                <viewController storyboardIdentifier="TimeTriggerVC" id="2Vs-mn-ldY" customClass="TimeTriggerViewController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDh-H2-lkt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Trigger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuG-1M-FMA">
+                                <rect key="frame" x="16" y="80" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-Sf-Dvv" userLabel="Seperator">
+                                <rect key="frame" x="0.0" y="363" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="BaC-zD-fAF"/>
+                                </constraints>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-45-1Nx">
+                                <rect key="frame" x="0.0" y="121" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="565860072.57846701">
+                                    <!--2018-12-07 07:21:12 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="de"/>
+                                <connections>
+                                    <action selector="onStartTimeChanged:" destination="2Vs-mn-ldY" eventType="valueChanged" id="DmJ-eK-Yad"/>
+                                    <action selector="onTimeChanged:" destination="jbe-lI-0Zu" eventType="valueChanged" id="LeE-ZL-rcJ"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="ynL-fO-0OQ">
+                                <rect key="frame" x="0.0" y="394" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="565860072.57846701">
+                                    <!--2018-12-07 07:21:12 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="de"/>
+                                <connections>
+                                    <action selector="onEndTimeChanged:" destination="2Vs-mn-ldY" eventType="valueChanged" id="JpW-Bi-bEJ"/>
+                                    <action selector="onTimeChanged:" destination="jbe-lI-0Zu" eventType="valueChanged" id="mxO-ah-Nhf"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Trigger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJC-AY-4ZK">
+                                <rect key="frame" x="16" y="380" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JuG-1M-FMA" firstAttribute="top" secondItem="PaD-tF-ppK" secondAttribute="top" constant="16" id="4XF-fP-TXl"/>
+                            <constraint firstItem="YJC-AY-4ZK" firstAttribute="top" secondItem="SVb-Sf-Dvv" secondAttribute="bottom" constant="16" id="4hZ-Fd-cnV"/>
+                            <constraint firstItem="SVb-Sf-Dvv" firstAttribute="top" secondItem="jeh-45-1Nx" secondAttribute="bottom" constant="26" id="7Lj-tk-Cq1"/>
+                            <constraint firstItem="YJC-AY-4ZK" firstAttribute="leading" secondItem="PaD-tF-ppK" secondAttribute="leading" constant="16" id="8SM-Y5-NIB"/>
+                            <constraint firstItem="ynL-fO-0OQ" firstAttribute="trailing" secondItem="PaD-tF-ppK" secondAttribute="trailing" id="DZh-Kh-qED"/>
+                            <constraint firstItem="ynL-fO-0OQ" firstAttribute="top" secondItem="SVb-Sf-Dvv" secondAttribute="bottom" constant="30" id="M9R-i0-avA"/>
+                            <constraint firstItem="jeh-45-1Nx" firstAttribute="leading" secondItem="PaD-tF-ppK" secondAttribute="leading" id="MQC-er-tDc"/>
+                            <constraint firstItem="JuG-1M-FMA" firstAttribute="leading" secondItem="PaD-tF-ppK" secondAttribute="leading" constant="16" id="Mef-vP-4jf"/>
+                            <constraint firstItem="jeh-45-1Nx" firstAttribute="top" secondItem="JuG-1M-FMA" secondAttribute="bottom" constant="20" id="TLq-Ee-k3W"/>
+                            <constraint firstAttribute="trailing" secondItem="SVb-Sf-Dvv" secondAttribute="trailing" id="j9w-72-sfN"/>
+                            <constraint firstItem="ynL-fO-0OQ" firstAttribute="leading" secondItem="PaD-tF-ppK" secondAttribute="leading" id="ko2-5O-SII"/>
+                            <constraint firstItem="SVb-Sf-Dvv" firstAttribute="leading" secondItem="eDh-H2-lkt" secondAttribute="leading" id="wkG-fj-ar9"/>
+                            <constraint firstItem="jeh-45-1Nx" firstAttribute="trailing" secondItem="PaD-tF-ppK" secondAttribute="trailing" id="zdj-Vg-EqY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PaD-tF-ppK"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <connections>
+                        <outlet property="beginPicker" destination="jeh-45-1Nx" id="fL2-Jk-S1v"/>
+                        <outlet property="endPicker" destination="ynL-fO-0OQ" id="dpT-jW-ta6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waj-g6-Kc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831" y="1829"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="RV4-co-WiX">
