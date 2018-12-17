@@ -13,10 +13,13 @@ class SettingsViewController: UITableViewController
    }
    
    let settings = [
+   [
       Setting(name: "Location Trigger", storyboardId: "LocationTriggerVC"),
+      Setting(name: "Location Selection", storyboardId: "LocationSelectionVC"),
       Setting(name: "Time Trigger", storyboardId: "TimeTriggerVC"),
       Setting(name: "Weekdays", storyboardId: "WeekdayVC"),
       ]
+   ]
    
    override func viewWillAppear(_ animated: Bool)
    {
@@ -31,21 +34,27 @@ class SettingsViewController: UITableViewController
    }
    
    override func numberOfSections(in tableView: UITableView) -> Int {
-      return 1
+      return settings.count
+   }
+   
+   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      return "Trigger"
    }
    
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return settings.count
+      return settings[section].count
    }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-      cell.textLabel?.text = settings[indexPath.row].name
+      let setting = settings[indexPath.section][indexPath.row]
+      cell.textLabel?.text = setting.name
       return cell
    }
    
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let storyboardId = settings[indexPath.row].storyboardId
+      let setting = settings[indexPath.section][indexPath.row]
+      let storyboardId = setting.storyboardId
       pushViewController(withStoryboardID: storyboardId)
    }
 }

@@ -17,7 +17,7 @@
 		8A3E864921BA969800AD9E38 /* TimeTriggerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */; };
 		8A3E864B21BA96A200AD9E38 /* LocationTriggerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */; };
 		8A3E864D21BA991900AD9E38 /* WeekdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */; };
-		8A80EE7521B84C5900CAE80C /* LocationTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80EE7421B84C5900CAE80C /* LocationTriggerViewController.swift */; };
+		8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */; };
 		8A80EE7821B8504E00CAE80C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A80EE7721B8504E00CAE80C /* MapKit.framework */; };
 		8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFF7921B7020C001E1C6D /* AppDelegate.swift */; };
 		8A8AFF9221B7020D001E1C6D /* ZeitgeistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFF9121B7020D001E1C6D /* ZeitgeistTests.swift */; };
@@ -46,6 +46,7 @@
 		8A8AFFF121B7C52D001E1C6D /* RecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */; };
 		8A8AFFF421B7C568001E1C6D /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */; };
 		8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF521B7F466001E1C6D /* DateTimeStrings.swift */; };
+		8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */; };
 		8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */; };
 		8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7621BD4E14008B0F8D /* Time.swift */; };
 		8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7821BD4E4E008B0F8D /* Week.swift */; };
@@ -81,7 +82,7 @@
 		8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTriggerProcessor.swift; sourceTree = "<group>"; };
 		8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = WeekdayViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
-		8A80EE7421B84C5900CAE80C /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
+		8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationSelectionViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A80EE7721B8504E00CAE80C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8A8AFF7621B7020C001E1C6D /* Zeitgeist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeitgeist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8AFF7921B7020C001E1C6D /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -116,6 +117,7 @@
 		8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF521B7F466001E1C6D /* DateTimeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeStrings.swift; sourceTree = "<group>"; };
+		8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; };
 		8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TriggerManager.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7621BD4E14008B0F8D /* Time.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7821BD4E4E008B0F8D /* Week.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -164,7 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				8AF8223321BE3AD900C4247E /* Settings.storyboard */,
-				8A80EE7421B84C5900CAE80C /* LocationTriggerViewController.swift */,
+				8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */,
+				8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */,
 				8A3E864421BA557500AD9E38 /* MapViewController.swift */,
 				8ACF786921C2CBF800474F09 /* TimeSelectionViewController.swift */,
 				33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */,
@@ -512,8 +515,9 @@
 				8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */,
 				8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */,
 				8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */,
+				8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */,
 				8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */,
-				8A80EE7521B84C5900CAE80C /* LocationTriggerViewController.swift in Sources */,
+				8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
