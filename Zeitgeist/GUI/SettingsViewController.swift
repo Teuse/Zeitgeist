@@ -3,7 +3,11 @@ import ReSwift
 
 class SettingsViewController: UITableViewController
 {
-   struct Setting {
+   private struct Section {
+      let name: String
+      let settings: [Setting]
+   }
+   private struct Setting {
       let name: String
       let storyboardId: String
       init(name: String, storyboardId: String) {
@@ -11,16 +15,10 @@ class SettingsViewController: UITableViewController
          self.storyboardId = storyboardId
       }
    }
-   
-   let settings = [
-   [
-      Setting(name: "Location Trigger", storyboardId: "LocationTriggerVC"),
-      Setting(name: "Location Selection", storyboardId: "LocationSelectionVC"),
-      Setting(name: "Time Trigger", storyboardId: "TimeTriggerVC"),
-      Setting(name: "Weekdays", storyboardId: "WeekdayVC"),
-      ]
-   ]
-   
+
+   private let sections: [Section] = createSettings()
+
+
    override func viewWillAppear(_ animated: Bool)
    {
       super.viewWillAppear(animated)
@@ -34,26 +32,26 @@ class SettingsViewController: UITableViewController
    }
    
    override func numberOfSections(in tableView: UITableView) -> Int {
-      return settings.count
+      return sections.count
    }
    
    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-      return "Trigger"
+      return sections[section].name
    }
    
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return settings[section].count
+      return sections[section].settings.count
    }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-      let setting = settings[indexPath.section][indexPath.row]
+      let setting = sections[indexPath.section].settings[indexPath.row]
       cell.textLabel?.text = setting.name
       return cell
    }
    
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let setting = settings[indexPath.section][indexPath.row]
+      let setting = sections[indexPath.section].settings[indexPath.row]
       let storyboardId = setting.storyboardId
       pushViewController(withStoryboardID: storyboardId)
    }
@@ -74,4 +72,25 @@ extension SettingsViewController
       navigationController?.pushViewController(controller, animated: true)
    }
 
+   private static func createSettings() -> [Section]
+   {
+      var sections = [Section]()
+      var settings = [
+         Setting(name: "Select Timespan", storyboardId: "LocationTriggerVC"),
+         Setting(name: "Select Region", storyboardId: "LocationSelectionVC"),
+         ]
+      sections.append(Section(name: "Location Trigger", settings: settings))
+
+      settings = [
+         Setting(name: "Select Time", storyboardId: "TimeTriggerVC"),
+      ]
+      sections.append(Section(name: "Time Trigger", settings: settings))
+
+      settings = [
+         Setting(name: "Repeat", storyboardId: "WeekdayVC"),
+      ]
+      sections.append(Section(name: "Time Trigger", settings: settings))
+
+      return sections
+   }
 }

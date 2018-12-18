@@ -3,11 +3,10 @@ import ReSwift
 
 class LocationTriggerViewController: UIViewController
 {
-   private var timeSelectionVC: TimeSelectionViewController?
-
-   @IBOutlet weak var startTimeButton: UIButton!
-   @IBOutlet weak var endTimeButton: UIButton!
-   @IBOutlet weak var mapViewContainer: UIView!
+   @IBOutlet weak var startFromPicker: UIDatePicker!
+   @IBOutlet weak var startToPicker: UIDatePicker!
+   @IBOutlet weak var endFromPicker: UIDatePicker!
+   @IBOutlet weak var endToPicker: UIDatePicker!
    
    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
@@ -21,14 +20,36 @@ class LocationTriggerViewController: UIViewController
       unsubscribe(self)
    }
 
-   override func viewDidLayoutSubviews() {
-      startTimeButton.titleLabel?.text = ""
-      endTimeButton.titleLabel?.text = ""
+   override func viewDidLoad() {
+      title = "Select Timespan"
    }
-   
-   @IBAction func onTimeSelectionButton(_ sender: UIButton)
+
+   @IBAction func onStartChanged(_ sender: UIDatePicker)
    {
-      dispatch(action: ToggleSelectionViewAction(isStartTime: sender == startTimeButton))
+      var timeFrame = TimeFrame()
+
+      let fromComp = Calendar.current.dateComponents([.hour, .minute], from: startFromPicker.date)
+      timeFrame.start = Time(hour: fromComp.hour ?? 0, minute: fromComp.minute ?? 0)
+
+      let toComp = Calendar.current.dateComponents([.hour, .minute], from: startToPicker.date)
+      timeFrame.end = Time(hour: toComp.hour ?? 0, minute: toComp.minute ?? 0)
+
+      let action = LocationTriggerActions.StartTimeFrame(timeFrame: timeFrame)
+      dispatch(action: action)
+   }
+
+   @IBAction func onEndChanged(_ sender: UIDatePicker)
+   {
+      var timeFrame = TimeFrame()
+
+      let fromComp = Calendar.current.dateComponents([.hour, .minute], from: endFromPicker.date)
+      timeFrame.start = Time(hour: fromComp.hour ?? 0, minute: fromComp.minute ?? 0)
+
+      let toComp = Calendar.current.dateComponents([.hour, .minute], from: endToPicker.date)
+      timeFrame.end = Time(hour: toComp.hour ?? 0, minute: toComp.minute ?? 0)
+
+      let action = LocationTriggerActions.StartTimeFrame(timeFrame: timeFrame)
+      dispatch(action: action)
    }
 }
 
@@ -36,31 +57,16 @@ extension LocationTriggerViewController: StoreSubscriber
 {
    func newState(state: LocationTriggerState)
    {
-      if state.isTimeSelectionViewShown {
-         openTimeSelectionView(forStartTime: state.isStartTimeSelector)
-      } else {
-         closeTimeSelectionView()
-      }
+      update(picker: startFromPicker, withTime: state.startTimeFrame.start)
+      update(picker: startToPicker, withTime: state.startTimeFrame.end)
+      update(picker: endFromPicker, withTime: state.endTimeFrame.start)
+      update(picker: endToPicker, withTime: state.endTimeFrame.end)
    }
-}
 
-extension LocationTriggerViewController
-{
-   private func openTimeSelectionView(forStartTime: Bool)
+   private func update(picker: UIDatePicker, withTime time: Time)
    {
-      guard timeSelectionVC == nil else { return }
-      let storyboard = UIStoryboard(name: "Settings", bundle: nil)
-      timeSelectionVC = storyboard.instantiateViewController(withIdentifier: "TimeSelectionViewController") as? TimeSelectionViewController
-      timeSelectionVC?.isStartTime = forStartTime
-      if let controller = timeSelectionVC {
-         view.addSubview(controller.view)
-         controller.view.frame = mapViewContainer.frame
-      }
-   }
-   
-   private func closeTimeSelectionView()
-   {
-      timeSelectionVC?.view.removeFromSuperview()
-      timeSelectionVC = nil
+      picker.date = Calendar.current.date(bySettingHour: time.hour,
+                                          minute: time.minute,
+                                          second: 0, of: Date())!
    }
 }

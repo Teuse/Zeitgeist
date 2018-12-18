@@ -5,7 +5,7 @@ import MapKit
 
 class LocationSelectionViewController: UIViewController
 {
-   var currentRegion
+   var location = CLLocation()
 //   var fixItems = [String]()
    var searchItems = [MKMapItem]()
    
@@ -30,6 +30,7 @@ class LocationSelectionViewController: UIViewController
       tableView.dataSource = self
       searchBar.delegate = self
       searchBar.showsCancelButton = false
+      title = "Select Region"
    }
    
    private func set(editing: Bool)
@@ -43,7 +44,7 @@ extension LocationSelectionViewController: StoreSubscriber
 {
    func newState(state: LocationTriggerState)
    {
-      
+      location = state.currentLocation
    }
 }
 
@@ -61,10 +62,13 @@ extension LocationSelectionViewController: UISearchBarDelegate
       set(editing: false)
    }
    
-   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+   {
+      let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 0.01, longitudinalMeters: 0.01)
+
       let request = MKLocalSearch.Request()
       request.naturalLanguageQuery = searchText
-//      request.region = mapView.region
+      request.region = region
       let search = MKLocalSearch(request: request)
       search.start { response, _ in
          guard let response = response else { return }
@@ -90,7 +94,13 @@ extension LocationSelectionViewController: UITableViewDelegate, UITableViewDataS
       cell.textLabel?.text = selectedItem.name
       return cell
    }
-//
-//   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//   }
+
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+   {
+      let coordinate = searchItems[indexPath.row].placemark.coordinate
+      let location = CLLocation(latitude: coordinate.longitude, longitude: coordinate.longitude)
+      dispatch(action: LocationTriggerActions.CurrentLocation(location: location))
+
+      searchBar.endEditing(true)
+   }
 }

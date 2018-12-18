@@ -1,15 +1,19 @@
 import Foundation
 import ReSwift
+import CoreLocation
 
 
-struct ToggleSelectionViewAction: Action {
-  let isStartTime: Bool
-}
+struct LocationTriggerActions
+{
+  struct CurrentLocation: Action {
+    let location: CLLocation
+  }
 
-struct StartTimeAction: Action {
-  let timeFrame: TimeFrame
-}
+  struct StartTimeFrame: Action {
+    let timeFrame: TimeFrame
+  }
 
-struct EndTimeAction: Action {
-  let timeFrame: TimeFrame
+  struct EndTimeFrame: Action {
+    let timeFrame: TimeFrame
+  }
 }

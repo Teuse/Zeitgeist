@@ -50,7 +50,6 @@
 		8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */; };
 		8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7621BD4E14008B0F8D /* Time.swift */; };
 		8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7821BD4E4E008B0F8D /* Week.swift */; };
-		8ACF786A21C2CBF900474F09 /* TimeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF786921C2CBF800474F09 /* TimeSelectionViewController.swift */; };
 		8AF8223421BE3AD900C4247E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8223321BE3AD900C4247E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +77,7 @@
 		33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerState.swift; sourceTree = "<group>"; };
 		33BF449021C7D0EE0019FB7E /* TimeTriggerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerActions.swift; sourceTree = "<group>"; };
-		8A3E864421BA557500AD9E38 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8A3E864421BA557500AD9E38 /* MapViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTriggerProcessor.swift; sourceTree = "<group>"; };
 		8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = WeekdayViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
@@ -101,7 +100,7 @@
 		8A8AFFBE21B70482001E1C6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8A8AFFC121B70542001E1C6D /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		8A8AFFC421B70980001E1C6D /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		8A8AFFC521B70980001E1C6D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8A8AFFC521B70980001E1C6D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A8AFFC621B70980001E1C6D /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8A8AFFD821B70D96001E1C6D /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A8AFFDA21B70EE6001E1C6D /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
@@ -117,11 +116,10 @@
 		8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF521B7F466001E1C6D /* DateTimeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeStrings.swift; sourceTree = "<group>"; };
-		8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; };
+		8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TriggerManager.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7621BD4E14008B0F8D /* Time.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7821BD4E4E008B0F8D /* Week.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; tabWidth = 3; };
-		8ACF786921C2CBF800474F09 /* TimeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeSelectionViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8AF8223321BE3AD900C4247E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +150,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33BF449421C9271B0019FB7E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				8A8AFFB321B703D7001E1C6D /* Zeitgeist.xcdatamodeld */,
+				8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */,
+				8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		33BF449521C9272D0019FB7E /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				8ACC3D7621BD4E14008B0F8D /* Time.swift */,
+				8ACC3D7821BD4E4E008B0F8D /* Week.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
 		8A26568821BB9F0400BD208A /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +186,6 @@
 				8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */,
 				8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */,
 				8A3E864421BA557500AD9E38 /* MapViewController.swift */,
-				8ACF786921C2CBF800474F09 /* TimeSelectionViewController.swift */,
 				33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */,
 				8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */,
 			);
@@ -277,15 +293,12 @@
 		8A8AFFB221B703D7001E1C6D /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				8A8AFFB321B703D7001E1C6D /* Zeitgeist.xcdatamodeld */,
-				8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */,
+				33BF449521C9272D0019FB7E /* DataTypes */,
+				33BF449421C9271B0019FB7E /* Database */,
 				8A8AFFD821B70D96001E1C6D /* AppState.swift */,
-				8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */,
-				8ACC3D7621BD4E14008B0F8D /* Time.swift */,
 				332CE7D721C3E0380056B821 /* LocationTriggerState.swift */,
 				33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */,
 				332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */,
-				8ACC3D7821BD4E4E008B0F8D /* Week.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -490,7 +503,6 @@
 				8A8AFFC721B70981001E1C6D /* TodayViewController.swift in Sources */,
 				8A3E864B21BA96A200AD9E38 /* LocationTriggerProcessor.swift in Sources */,
 				8A3E864D21BA991900AD9E38 /* WeekdayViewController.swift in Sources */,
-				8ACF786A21C2CBF900474F09 /* TimeSelectionViewController.swift in Sources */,
 				8A3E864921BA969800AD9E38 /* TimeTriggerProcessor.swift in Sources */,
 				332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */,
 				8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */,

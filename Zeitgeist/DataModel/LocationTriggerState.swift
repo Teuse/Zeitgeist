@@ -1,9 +1,11 @@
 import ReSwift
+import CoreLocation
 
 // --------------------------------------------------------------------------------
 
 struct LocationTriggerState: StateType
 {
+   var currentLocation = CLLocation(latitude: 52.520008, longitude: 13.404954)
    var enabled = false
    var region = false
 
@@ -22,22 +24,18 @@ extension LocationTriggerState
       var state = state ?? LocationTriggerState()
 
       switch action {
-      case let action as ToggleSelectionViewAction:
-         handleToggleTimeSelection(isStartTime: action.isStartTime, state: &state)
+      case let action as LocationTriggerActions.CurrentLocation:
+         state.currentLocation = action.location
+      case let action as LocationTriggerActions.StartTimeFrame:
+         state.startTimeFrame = action.timeFrame
+      case let action as LocationTriggerActions.EndTimeFrame:
+         state.endTimeFrame = action.timeFrame
       default: break
       }
       return state
    }
 
-   static func handleToggleTimeSelection(isStartTime: Bool, state: inout LocationTriggerState)
-   {
-      if state.isTimeSelectionViewShown && state.isStartTimeSelector == isStartTime {
-         state.isTimeSelectionViewShown = false
-      }
-      else {
-         state.isTimeSelectionViewShown = true
-      }
-
-      state.isStartTimeSelector = isStartTime
-   }
+//   static func handleToggleTimeSelection(isStartTime: Bool, state: inout LocationTriggerState)
+//   {
+//   }
 }
