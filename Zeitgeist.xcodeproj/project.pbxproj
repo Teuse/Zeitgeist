@@ -10,6 +10,7 @@
 		332CE7D521C3DB1B0056B821 /* LocationTriggerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D421C3DB1B0056B821 /* LocationTriggerActions.swift */; };
 		332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */; };
 		332CE7D921C3E0380056B821 /* LocationTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D721C3E0380056B821 /* LocationTriggerState.swift */; };
+		3359071021CA28680002A0A6 /* EnableSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359070F21CA28680002A0A6 /* EnableSettingCell.swift */; };
 		33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */; };
 		33BF448F21C7CF930019FB7E /* TimeTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */; };
 		33BF449121C7D0EF0019FB7E /* TimeTriggerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF449021C7D0EE0019FB7E /* TimeTriggerActions.swift */; };
@@ -74,6 +75,7 @@
 		332CE7D421C3DB1B0056B821 /* LocationTriggerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTriggerActions.swift; sourceTree = "<group>"; };
 		332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayTriggerState.swift; sourceTree = "<group>"; };
 		332CE7D721C3E0380056B821 /* LocationTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationTriggerState.swift; sourceTree = "<group>"; tabWidth = 3; };
+		3359070F21CA28680002A0A6 /* EnableSettingCell.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = EnableSettingCell.swift; sourceTree = "<group>"; tabWidth = 3; };
 		33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerState.swift; sourceTree = "<group>"; };
 		33BF449021C7D0EE0019FB7E /* TimeTriggerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerActions.swift; sourceTree = "<group>"; };
@@ -210,7 +212,9 @@
 				8A8AFFC121B70542001E1C6D /* ReSwift.framework */,
 				8A80EE7621B8504E00CAE80C /* Frameworks */,
 			);
+			indentWidth = 3;
 			sourceTree = "<group>";
+			tabWidth = 3;
 		};
 		8A8AFF7721B7020C001E1C6D /* Products */ = {
 			isa = PBXGroup;
@@ -286,6 +290,7 @@
 				8A8AFFC421B70980001E1C6D /* TodayViewController.swift */,
 				8A8AFFC621B70980001E1C6D /* HistoryViewController.swift */,
 				8A8AFFC521B70980001E1C6D /* SettingsViewController.swift */,
+				3359070F21CA28680002A0A6 /* EnableSettingCell.swift */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */,
 				8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */,
 				8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */,
+				3359071021CA28680002A0A6 /* EnableSettingCell.swift in Sources */,
 				8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */,
 				8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */,
 			);

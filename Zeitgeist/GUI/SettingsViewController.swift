@@ -9,9 +9,17 @@ class SettingsViewController: UITableViewController
    }
    private struct Setting {
       let name: String
-      let storyboardId: String
-      init(name: String, storyboardId: String) {
+      let cellId: String
+      let storyboardId: String?
+      var enabled: Bool { return storyboardId != nil }
+
+      init(name: String, cellId: String) {
          self.name = name
+         self.cellId = cellId
+      }
+      init(name: String, cellId: String, storyboardId: String) {
+         self.name = name
+         self.cellId = cellId
          self.storyboardId = storyboardId
       }
    }
@@ -44,15 +52,16 @@ class SettingsViewController: UITableViewController
    }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
       let setting = sections[indexPath.section].settings[indexPath.row]
+      let cell = tableView.dequeueReusableCell(withIdentifier: setting.cellId, for: indexPath)
       cell.textLabel?.text = setting.name
+      cell.isUserInteractionEnabled = setting.enabled
       return cell
    }
    
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let setting = sections[indexPath.section].settings[indexPath.row]
-      let storyboardId = setting.storyboardId
+      let storyboardId = setting.storyboardId ?? ""
       pushViewController(withStoryboardID: storyboardId)
    }
 }
