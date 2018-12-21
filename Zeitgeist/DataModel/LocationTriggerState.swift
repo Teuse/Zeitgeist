@@ -24,11 +24,11 @@ extension LocationTriggerState
       var state = state ?? LocationTriggerState()
 
       switch action {
-      case let action as LocationTriggerActions.CurrentLocation:
+      case let action as LocationActions.CurrentLocation:
          state.currentLocation = action.location
-      case let action as LocationTriggerActions.StartTimeFrame:
+      case let action as LocationActions.StartTimeFrame:
          state.startTimeFrame = action.timeFrame
-      case let action as LocationTriggerActions.EndTimeFrame:
+      case let action as LocationActions.EndTimeFrame:
          state.endTimeFrame = action.timeFrame
       default: break
       }

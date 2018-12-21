@@ -15,7 +15,7 @@ struct WeekdayTriggerState: StateType
       let state = state ?? WeekdayTriggerState()
 
       switch action {
-      case let action as WeekdayAction:
+      case let action as TimeActions.SelectRepeat:
          state.weekdayTrigger.set(weekday: action.weekday, selected: action.selected)
       default: break
       }

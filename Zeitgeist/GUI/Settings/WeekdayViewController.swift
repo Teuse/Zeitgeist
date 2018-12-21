@@ -53,6 +53,6 @@ extension WeekdayViewController: UITableViewDelegate, UITableViewDataSource
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let day = Weekday(rawValue: indexPath.row) ?? .monday
       let selected = weekTrigger.isSelected(weekday: day)
-      dispatch(action: WeekdayAction(weekday: day, selected: !selected))
+      dispatch(action: TimeActions.SelectRepeat(weekday: day, selected: !selected))
    }
 }

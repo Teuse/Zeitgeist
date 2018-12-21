@@ -99,7 +99,7 @@ extension LocationSelectionViewController: UITableViewDelegate, UITableViewDataS
    {
       let coordinate = searchItems[indexPath.row].placemark.coordinate
       let location = CLLocation(latitude: coordinate.longitude, longitude: coordinate.longitude)
-      dispatch(action: LocationTriggerActions.CurrentLocation(location: location))
+      dispatch(action: LocationActions.CurrentLocation(location: location))
 
       searchBar.endEditing(true)
    }

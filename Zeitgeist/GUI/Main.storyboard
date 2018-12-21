@@ -220,52 +220,6 @@
             </objects>
             <point key="canvasLocation" x="993" y="376"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="OLt-7d-oJE">
-            <objects>
-                <tableViewController id="4MA-xY-9F6" customClass="SettingsViewController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8YS-zL-2ku">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefaultSettingCell" id="Kuf-mf-end">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kuf-mf-end" id="ZiO-Kw-Uv9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EnableSettingCell" id="r4K-zk-QXb" customClass="EnableSettingCell" customModule="Zeitgeist" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r4K-zk-QXb" id="j9S-m3-kCn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DdL-20-aFZ">
-                                            <rect key="frame" x="310" y="6" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </switch>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="mapView" destination="DdL-20-aFZ" id="YCP-T7-MHg"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4MA-xY-9F6" id="uPv-iS-54l"/>
-                            <outlet property="delegate" destination="4MA-xY-9F6" id="zTL-8a-Vib"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="9fo-Va-a0o"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="35D-N3-9C8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="993" y="1128"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uJB-Hd-YRP">
             <objects>
@@ -276,12 +230,43 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="4MA-xY-9F6" kind="relationship" relationship="rootViewController" id="2uI-j4-auE"/>
+                        <segue destination="bSI-IZ-Tx3" kind="relationship" relationship="rootViewController" id="B05-qR-WSG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzh-jf-hQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="174" y="1128"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="bbY-km-wnd">
+            <objects>
+                <viewController id="bSI-IZ-Tx3" customClass="SettingsViewController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="99Q-ZP-ZU8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-gG-tWj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tTx-gG-tWj" firstAttribute="bottom" secondItem="BY4-2C-A1p" secondAttribute="bottom" id="6qQ-FN-OOT"/>
+                            <constraint firstItem="tTx-gG-tWj" firstAttribute="leading" secondItem="BY4-2C-A1p" secondAttribute="leading" id="8YC-qx-X33"/>
+                            <constraint firstItem="tTx-gG-tWj" firstAttribute="top" secondItem="BY4-2C-A1p" secondAttribute="top" id="eo2-9n-acw"/>
+                            <constraint firstItem="tTx-gG-tWj" firstAttribute="trailing" secondItem="BY4-2C-A1p" secondAttribute="trailing" id="gWC-ga-eeE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BY4-2C-A1p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YCo-6d-9fO"/>
+                    <connections>
+                        <outlet property="tableView" destination="tTx-gG-tWj" id="eAT-MT-DAG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQS-EZ-W7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="1127.5862068965519"/>
         </scene>
     </scenes>
     <resources>

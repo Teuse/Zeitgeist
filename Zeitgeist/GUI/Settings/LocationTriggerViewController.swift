@@ -34,7 +34,7 @@ class LocationTriggerViewController: UIViewController
       let toComp = Calendar.current.dateComponents([.hour, .minute], from: startToPicker.date)
       timeFrame.end = Time(hour: toComp.hour ?? 0, minute: toComp.minute ?? 0)
 
-      let action = LocationTriggerActions.StartTimeFrame(timeFrame: timeFrame)
+      let action = LocationActions.StartTimeFrame(timeFrame: timeFrame)
       dispatch(action: action)
    }
 
@@ -48,7 +48,7 @@ class LocationTriggerViewController: UIViewController
       let toComp = Calendar.current.dateComponents([.hour, .minute], from: endToPicker.date)
       timeFrame.end = Time(hour: toComp.hour ?? 0, minute: toComp.minute ?? 0)
 
-      let action = LocationTriggerActions.StartTimeFrame(timeFrame: timeFrame)
+      let action = LocationActions.StartTimeFrame(timeFrame: timeFrame)
       dispatch(action: action)
    }
 }

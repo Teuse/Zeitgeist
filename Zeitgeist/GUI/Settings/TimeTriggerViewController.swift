@@ -28,7 +28,7 @@ class TimeTriggerViewController: UIViewController
       let time = Time(hour: dateComps.hour ?? 0,
                       minute: dateComps.minute ?? 0)
 
-      let action = TimeTriggerActions.SetStartTime(time: time)
+      let action = TimeActions.SetStartTime(time: time)
       dispatch(action: action)
    }
 
@@ -38,7 +38,7 @@ class TimeTriggerViewController: UIViewController
       let time = Time(hour: dateComps.hour ?? 0,
                       minute: dateComps.minute ?? 0)
 
-      let action = TimeTriggerActions.SetEndTime(time: time)
+      let action = TimeActions.SetEndTime(time: time)
       dispatch(action: action)
    }
 }
