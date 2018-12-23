@@ -1,6 +1,6 @@
 import Foundation
 
-class TimeTriggerProcessor
+class TimeProcessor
 {
    typealias Callback = () -> Void
 

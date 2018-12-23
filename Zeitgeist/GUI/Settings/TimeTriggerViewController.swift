@@ -8,6 +8,8 @@ class TimeTriggerViewController: UIViewController
    @IBOutlet weak var beginPicker: UIDatePicker!
    @IBOutlet weak var endPicker: UIDatePicker!
 
+   // --------------------------------------------------------------------------------
+
    override func viewWillAppear(_ animated: Bool)
    {
       super.viewWillAppear(animated)
@@ -21,6 +23,8 @@ class TimeTriggerViewController: UIViewController
       super.viewWillDisappear(animated)
       unsubscribe(self)
    }
+
+   // --------------------------------------------------------------------------------
 
    @IBAction func onStartTimeChanged(_ sender: UIDatePicker)
    {
@@ -43,9 +47,12 @@ class TimeTriggerViewController: UIViewController
    }
 }
 
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
+
 extension TimeTriggerViewController: StoreSubscriber
 {
-   func newState(state: TimeTriggerState)
+   func newState(state: TimeState)
    {
       let cal = Calendar.current
       beginPicker.date = cal.date(bySettingHour: state.startTime.hour,

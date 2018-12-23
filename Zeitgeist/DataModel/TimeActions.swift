@@ -1,7 +1,6 @@
 import Foundation
 import ReSwift
 
-
 struct TimeActions
 {
    struct EnableTrigger: Action {

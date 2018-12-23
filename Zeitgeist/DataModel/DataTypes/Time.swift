@@ -1,6 +1,6 @@
 import Foundation
 
-struct TimeFrame {
+struct TimeFrame: Codable {
    var start = Time()
    var end = Time()
 
@@ -11,7 +11,7 @@ struct TimeFrame {
    }
 }
 
-struct Time {
+struct Time: Codable {
    var hour:Int = 0
    var minute:Int = 0
 

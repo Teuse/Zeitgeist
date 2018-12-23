@@ -5,13 +5,15 @@ class TriggerManager
    private let store: Store<AppState>
    private var timer = Timer()
 
-   private lazy var startTimeTrigger: TimeTriggerProcessor = {
-      return TimeTriggerProcessor() { [weak self] in
+   private let locationProcessor = LocationProcessor()
+
+   private lazy var startTimeTrigger: TimeProcessor = {
+      return TimeProcessor() { [weak self] in
          self?.print()
       }
    }()
-   private lazy var endTimeTrigger: TimeTriggerProcessor = {
-      return TimeTriggerProcessor() { [weak self] in
+   private lazy var endTimeTrigger: TimeProcessor = {
+      return TimeProcessor() { [weak self] in
          self?.print()
       }
    }()

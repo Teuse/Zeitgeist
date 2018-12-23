@@ -17,6 +17,9 @@ class RootViewController: UIViewController
     }
 }
 
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
+
 extension RootViewController: StoreSubscriber
 {
     func newState(state: AppState)

@@ -1,13 +1,13 @@
 import ReSwift
 import CoreLocation
 
-// --------------------------------------------------------------------------------
-
-struct LocationTriggerState: StateType
+struct LocationState: StateType, Codable
 {
-   var currentLocation = CLLocation(latitude: 52.520008, longitude: 13.404954)
+//   let locationManager = CLLocationManager()
+
    var enabled = false
    var region = false
+   var currentLocation = Coordinate(latitude: 52.520008, longitude: 13.404954)
 
    var startTimeFrame = TimeFrame(startHour: 6, endHour: 10)
    var endTimeFrame = TimeFrame(startHour: 15, endHour: 18)
@@ -16,14 +16,17 @@ struct LocationTriggerState: StateType
    var isStartTimeSelector = true
 }
 
+// --------------------------------------------------------------------------------
 //MARK: - Reducer
 
-extension LocationTriggerState
+extension LocationState
 {
-   static func reducer(action: Action, state: LocationTriggerState?) -> LocationTriggerState {
-      var state = state ?? LocationTriggerState()
+   static func reducer(action: Action, state: LocationState?) -> LocationState {
+      var state = state ?? LocationState()
 
       switch action {
+      case let action as LocationActions.EnableTrigger:
+         state.enabled = action.enabled
       case let action as LocationActions.CurrentLocation:
          state.currentLocation = action.location
       case let action as LocationActions.StartTimeFrame:
@@ -35,7 +38,7 @@ extension LocationTriggerState
       return state
    }
 
-//   static func handleToggleTimeSelection(isStartTime: Bool, state: inout LocationTriggerState)
+//   static func handleEnableTrigger(enable: Bool, state: inout LocationTriggerState)
 //   {
 //   }
 }

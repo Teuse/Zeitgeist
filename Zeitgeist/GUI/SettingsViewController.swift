@@ -11,7 +11,8 @@ class SettingsViewController: UIViewController
    {
       super.viewWillAppear(animated)
       subscribe(self)
-      
+
+      title = "Settings"
       tableView.delegate = self
       tableView.dataSource = self
    }
@@ -21,7 +22,18 @@ class SettingsViewController: UIViewController
       super.viewWillDisappear(animated)
       unsubscribe(self)
    }
+
+   func pushViewController(withStoryboardID sorryboardId: String)
+   {
+      let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+      let controller = storyboard.instantiateViewController(withIdentifier: sorryboardId)
+      controller.hidesBottomBarWhenPushed = true
+      navigationController?.pushViewController(controller, animated: true)
+   }
 }
+
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
 
 extension SettingsViewController: StoreSubscriber
 {
@@ -29,6 +41,9 @@ extension SettingsViewController: StoreSubscriber
    {
    }
 }
+
+// --------------------------------------------------------------------------------
+//MARK: - TableView
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource
 {
@@ -51,11 +66,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource
       if let storyboardId = setting.contentId {
          cell.accessoryType = .none
          let storyboard = UIStoryboard(name: "Settings", bundle: nil)
-         if let controller = storyboard.instantiateViewController(withIdentifier: storyboardId) as? EnableSettingCell {
-            controller.type = setting.enableSettingType
-            controller.view.frame = cell.frame
-            cell.addSubview(controller.view)
-         }
+         let controller = storyboard.instantiateViewController(withIdentifier: storyboardId)
+         controller.view.frame = cell.frame
+         cell.addSubview(controller.view)
+         addChild(controller)
       }
       else {
          cell.accessoryType = .disclosureIndicator
@@ -73,14 +87,5 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource
    
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return settings.count(for: section)
-   }
-}
-
-extension SettingsViewController
-{
-   func pushViewController(withStoryboardID sorryboardId: String) {
-      let storyboard = UIStoryboard(name: "Settings", bundle: nil)
-      let controller = storyboard.instantiateViewController(withIdentifier: sorryboardId)
-      navigationController?.pushViewController(controller, animated: true)
    }
 }

@@ -2,15 +2,10 @@ import Foundation
 import ReSwift
 import CoreLocation
 
-
 struct LocationActions
 {
    struct EnableTrigger: Action {
       let enabled: Bool
-   }
-   
-   struct CurrentLocation: Action {
-      let location: CLLocation
    }
    
    struct StartTimeFrame: Action {
@@ -19,5 +14,14 @@ struct LocationActions
    
    struct EndTimeFrame: Action {
       let timeFrame: TimeFrame
+   }
+
+   struct CurrentLocation: Action {
+      let location: Coordinate
+   }
+
+   struct UpdateMonitoringRegion: Action {
+      let coordinate: CLLocationCoordinate2D
+      let radius: CLLocationDistance
    }
 }

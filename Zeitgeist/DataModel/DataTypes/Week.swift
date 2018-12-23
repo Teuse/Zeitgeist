@@ -10,7 +10,7 @@ import Foundation
 //   }
 //}
 
-class WeekTrigger
+class WeekTrigger: Codable
 {
    private var enabled = [Weekday]()
 
@@ -27,9 +27,19 @@ class WeekTrigger
    func isSelected(weekday: Weekday) -> Bool {
       return enabled.contains(where: {$0 == weekday})
    }
+
+   func selectWorkdays() {
+      set(weekday: .monday, selected: true)
+      set(weekday: .tuesday, selected: true)
+      set(weekday: .wednesday, selected: true)
+      set(weekday: .thursday, selected: true)
+      set(weekday: .friday, selected: true)
+      set(weekday: .saturday, selected: false)
+      set(weekday: .sunday, selected: false)
+   }
 }
 
-enum Weekday: Int, CaseIterable
+enum Weekday: Int, CaseIterable, Codable
 {
    case monday = 0
    case tuesday = 1

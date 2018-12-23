@@ -4,31 +4,44 @@ import UIKit
 
 extension UIViewController
 {
-    //   typealias StoreSubscriberStateType = AppState
+   //   typealias StoreSubscriberStateType = AppState
 
-    func dispatch(action: Action)
-    {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.appStore.dispatch(action)
-    }
+   var store: Store<AppState> {
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      return appDelegate.appStore
+   }
 
-    func subscribe<S: StoreSubscriber>(_ vc: S)
-    {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.appStore.subscribe(vc, transform: nil)
-    }
+   func dispatch(action: Action)
+   {
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      appDelegate.appStore.dispatch(action)
+   }
 
-    func subscribe<SelectedState, S: StoreSubscriber>(
-        _ vc: S, transform: ((Subscription<AppState>) -> Subscription<SelectedState>)?
-    ) where S.StoreSubscriberStateType == SelectedState
-    {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.appStore.subscribe(vc, transform: transform)
-    }
+   func dispatch(action: Action?)
+   {
+      if let action = action {
+         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+         appDelegate.appStore.dispatch(action)
+      }
+   }
 
-    func unsubscribe(_ vc: AnyStoreSubscriber)
-    {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.appStore.unsubscribe(vc)
-    }
+   func subscribe<S: StoreSubscriber>(_ vc: S)
+   {
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      appDelegate.appStore.subscribe(vc, transform: nil)
+   }
+
+   func subscribe<SelectedState, S: StoreSubscriber>(
+      _ vc: S, transform: ((Subscription<AppState>) -> Subscription<SelectedState>)?
+      ) where S.StoreSubscriberStateType == SelectedState
+   {
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      appDelegate.appStore.subscribe(vc, transform: transform)
+   }
+
+   func unsubscribe(_ vc: AnyStoreSubscriber)
+   {
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      appDelegate.appStore.unsubscribe(vc)
+   }
 }

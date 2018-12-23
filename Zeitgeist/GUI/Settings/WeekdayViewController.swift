@@ -14,6 +14,7 @@ class WeekdayViewController: UIViewController
       }
       tableView.delegate = self
       tableView.dataSource = self
+      title = "Select Repetition"
    }
    
    override func viewWillDisappear(_ animated: Bool)
@@ -23,6 +24,9 @@ class WeekdayViewController: UIViewController
    }
 }
 
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
+
 extension WeekdayViewController: StoreSubscriber
 {
    func newState(state: WeekdayTriggerState)
@@ -31,6 +35,9 @@ extension WeekdayViewController: StoreSubscriber
       tableView.reloadData()
    }
 }
+
+// --------------------------------------------------------------------------------
+//MARK: - TableView
 
 extension WeekdayViewController: UITableViewDelegate, UITableViewDataSource
 {

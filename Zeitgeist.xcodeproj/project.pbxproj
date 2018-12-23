@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		332CE7D521C3DB1B0056B821 /* LocationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D421C3DB1B0056B821 /* LocationActions.swift */; };
 		332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */; };
-		332CE7D921C3E0380056B821 /* LocationTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D721C3E0380056B821 /* LocationTriggerState.swift */; };
-		3359071021CA28680002A0A6 /* EnableSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359070F21CA28680002A0A6 /* EnableSettingCell.swift */; };
+		332CE7D921C3E0380056B821 /* LocationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D721C3E0380056B821 /* LocationState.swift */; };
+		337DB11B21D025CF00960CFB /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337DB11A21D025CF00960CFB /* Coordinate.swift */; };
+		337FC72721CEC93E007B4BF7 /* EnableLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337FC72521CEC93E007B4BF7 /* EnableLocationCell.swift */; };
+		337FC72821CEC93E007B4BF7 /* EnableTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337FC72621CEC93E007B4BF7 /* EnableTimeCell.swift */; };
+		33883AA221CD0EB00010C2F7 /* SearchRadius.png in Resources */ = {isa = PBXBuildFile; fileRef = 33883AA121CD0EAF0010C2F7 /* SearchRadius.png */; };
 		33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */; };
-		33BF448F21C7CF930019FB7E /* TimeTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */; };
+		33BF448F21C7CF930019FB7E /* TimeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448E21C7CF930019FB7E /* TimeState.swift */; };
 		33BF449121C7D0EF0019FB7E /* TimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF449021C7D0EE0019FB7E /* TimeActions.swift */; };
 		8A3E864521BA557500AD9E38 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864421BA557500AD9E38 /* MapViewController.swift */; };
-		8A3E864921BA969800AD9E38 /* TimeTriggerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */; };
-		8A3E864B21BA96A200AD9E38 /* LocationTriggerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */; };
+		8A3E864921BA969800AD9E38 /* TimeProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864821BA969800AD9E38 /* TimeProcessor.swift */; };
+		8A3E864B21BA96A200AD9E38 /* LocationProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */; };
 		8A3E864D21BA991900AD9E38 /* WeekdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */; };
 		8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */; };
 		8A80EE7821B8504E00CAE80C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A80EE7721B8504E00CAE80C /* MapKit.framework */; };
@@ -42,7 +45,7 @@
 		8A8AFFE821B71293001E1C6D /* EvomotivLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */; };
 		8A8AFFE921B71293001E1C6D /* StartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE421B71292001E1C6D /* StartButton.png */; };
 		8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */; };
-		8A8AFFED21B727F6001E1C6D /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEC21B727F6001E1C6D /* Actions.swift */; };
+		8A8AFFED21B727F6001E1C6D /* AppStateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */; };
 		8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */; };
 		8A8AFFF121B7C52D001E1C6D /* RecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */; };
 		8A8AFFF421B7C568001E1C6D /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */; };
@@ -75,14 +78,17 @@
 /* Begin PBXFileReference section */
 		332CE7D421C3DB1B0056B821 /* LocationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationActions.swift; sourceTree = "<group>"; };
 		332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayTriggerState.swift; sourceTree = "<group>"; };
-		332CE7D721C3E0380056B821 /* LocationTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationTriggerState.swift; sourceTree = "<group>"; tabWidth = 3; };
-		3359070F21CA28680002A0A6 /* EnableSettingCell.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = EnableSettingCell.swift; sourceTree = "<group>"; tabWidth = 3; };
+		332CE7D721C3E0380056B821 /* LocationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationState.swift; sourceTree = "<group>"; tabWidth = 3; };
+		337DB11A21D025CF00960CFB /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		337FC72521CEC93E007B4BF7 /* EnableLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableLocationCell.swift; sourceTree = "<group>"; };
+		337FC72621CEC93E007B4BF7 /* EnableTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableTimeCell.swift; sourceTree = "<group>"; };
+		33883AA121CD0EAF0010C2F7 /* SearchRadius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchRadius.png; sourceTree = "<group>"; };
 		33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
-		33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTriggerState.swift; sourceTree = "<group>"; };
+		33BF448E21C7CF930019FB7E /* TimeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeState.swift; sourceTree = "<group>"; };
 		33BF449021C7D0EE0019FB7E /* TimeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeActions.swift; sourceTree = "<group>"; };
 		8A3E864421BA557500AD9E38 /* MapViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
-		8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
-		8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTriggerProcessor.swift; sourceTree = "<group>"; };
+		8A3E864821BA969800AD9E38 /* TimeProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
+		8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProcessor.swift; sourceTree = "<group>"; };
 		8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = WeekdayViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationSelectionViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A80EE7721B8504E00CAE80C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -114,7 +120,7 @@
 		8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EvomotivLogo.png; sourceTree = "<group>"; };
 		8A8AFFE421B71292001E1C6D /* StartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartButton.png; sourceTree = "<group>"; };
 		8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBAccess.swift; sourceTree = "<group>"; };
-		8A8AFFEC21B727F6001E1C6D /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStateActions.swift; sourceTree = "<group>"; };
 		8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicates.swift; sourceTree = "<group>"; };
 		8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
@@ -169,30 +175,32 @@
 			children = (
 				8ACC3D7621BD4E14008B0F8D /* Time.swift */,
 				8ACC3D7821BD4E4E008B0F8D /* Week.swift */,
+				337DB11A21D025CF00960CFB /* Coordinate.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
 		};
-		8A26568821BB9F0400BD208A /* Services */ = {
+		8A26568821BB9F0400BD208A /* TriggerProcessor */ = {
 			isa = PBXGroup;
 			children = (
 				8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */,
-				8A3E864821BA969800AD9E38 /* TimeTriggerProcessor.swift */,
-				8A3E864A21BA96A200AD9E38 /* LocationTriggerProcessor.swift */,
+				8A3E864821BA969800AD9E38 /* TimeProcessor.swift */,
+				8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */,
 			);
-			path = Services;
+			path = TriggerProcessor;
 			sourceTree = "<group>";
 		};
 		8A80EE7321B84C3E00CAE80C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				8AF8223321BE3AD900C4247E /* Settings.storyboard */,
-				3359070F21CA28680002A0A6 /* EnableSettingCell.swift */,
 				8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */,
 				8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */,
 				8A3E864421BA557500AD9E38 /* MapViewController.swift */,
 				33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */,
 				8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */,
+				337FC72521CEC93E007B4BF7 /* EnableLocationCell.swift */,
+				337FC72621CEC93E007B4BF7 /* EnableTimeCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -232,8 +240,7 @@
 		8A8AFF7821B7020C001E1C6D /* Zeitgeist */ = {
 			isa = PBXGroup;
 			children = (
-				8A26568821BB9F0400BD208A /* Services */,
-				8A8AFFAE21B703D7001E1C6D /* Actions */,
+				8A26568821BB9F0400BD208A /* TriggerProcessor */,
 				8A8AFFB221B703D7001E1C6D /* DataModel */,
 				8A8AFFAF21B703D7001E1C6D /* GUI */,
 				8A8AFFF221B7C53E001E1C6D /* Misc */,
@@ -274,16 +281,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		8A8AFFAE21B703D7001E1C6D /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				8A8AFFEC21B727F6001E1C6D /* Actions.swift */,
-				332CE7D421C3DB1B0056B821 /* LocationActions.swift */,
-				33BF449021C7D0EE0019FB7E /* TimeActions.swift */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
 		8A8AFFAF21B703D7001E1C6D /* GUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,8 +301,11 @@
 				33BF449521C9272D0019FB7E /* DataTypes */,
 				33BF449421C9271B0019FB7E /* Database */,
 				8A8AFFD821B70D96001E1C6D /* AppState.swift */,
-				332CE7D721C3E0380056B821 /* LocationTriggerState.swift */,
-				33BF448E21C7CF930019FB7E /* TimeTriggerState.swift */,
+				8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */,
+				332CE7D721C3E0380056B821 /* LocationState.swift */,
+				332CE7D421C3DB1B0056B821 /* LocationActions.swift */,
+				33BF448E21C7CF930019FB7E /* TimeState.swift */,
+				33BF449021C7D0EE0019FB7E /* TimeActions.swift */,
 				332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */,
 			);
 			path = DataModel;
@@ -322,6 +322,7 @@
 		8A8AFFDF21B71292001E1C6D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				33883AA121CD0EAF0010C2F7 /* SearchRadius.png */,
 				8A8AFFE021B71292001E1C6D /* PauseButton.png */,
 				8A8AFFE121B71292001E1C6D /* StopButton.png */,
 				8A8AFFE221B71292001E1C6D /* Evomotiv.png */,
@@ -412,6 +413,9 @@
 					8A8AFF7521B7020C001E1C6D = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -452,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33883AA221CD0EB00010C2F7 /* SearchRadius.png in Resources */,
 				8A8AFFB521B703D7001E1C6D /* LaunchScreen.storyboard in Resources */,
 				8A8AFFE721B71293001E1C6D /* Evomotiv.png in Resources */,
 				8A8AFFE621B71293001E1C6D /* StopButton.png in Resources */,
@@ -509,18 +514,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8AFFC721B70981001E1C6D /* TodayViewController.swift in Sources */,
-				8A3E864B21BA96A200AD9E38 /* LocationTriggerProcessor.swift in Sources */,
+				8A3E864B21BA96A200AD9E38 /* LocationProcessor.swift in Sources */,
 				8A3E864D21BA991900AD9E38 /* WeekdayViewController.swift in Sources */,
-				8A3E864921BA969800AD9E38 /* TimeTriggerProcessor.swift in Sources */,
+				8A3E864921BA969800AD9E38 /* TimeProcessor.swift in Sources */,
 				332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */,
 				8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */,
 				8A8AFFBA21B703D7001E1C6D /* Zeitgeist.xcdatamodeld in Sources */,
 				33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */,
+				337FC72821CEC93E007B4BF7 /* EnableTimeCell.swift in Sources */,
 				8A8AFFDD21B7101A001E1C6D /* UIViewControllerExtension.swift in Sources */,
 				8A8AFFD921B70D96001E1C6D /* AppState.swift in Sources */,
 				33BF449121C7D0EF0019FB7E /* TimeActions.swift in Sources */,
-				8A8AFFED21B727F6001E1C6D /* Actions.swift in Sources */,
+				8A8AFFED21B727F6001E1C6D /* AppStateActions.swift in Sources */,
 				8A8AFFB821B703D7001E1C6D /* RootViewController.swift in Sources */,
+				337FC72721CEC93E007B4BF7 /* EnableLocationCell.swift in Sources */,
 				8A8AFFC921B70981001E1C6D /* HistoryViewController.swift in Sources */,
 				8A8AFFC821B70981001E1C6D /* SettingsViewController.swift in Sources */,
 				8AF6414D21CC108E00F5326E /* SettingsDataSource.swift in Sources */,
@@ -528,16 +535,16 @@
 				8A8AFFF121B7C52D001E1C6D /* RecordExtension.swift in Sources */,
 				332CE7D521C3DB1B0056B821 /* LocationActions.swift in Sources */,
 				8A3E864521BA557500AD9E38 /* MapViewController.swift in Sources */,
+				337DB11B21D025CF00960CFB /* Coordinate.swift in Sources */,
 				8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */,
-				332CE7D921C3E0380056B821 /* LocationTriggerState.swift in Sources */,
+				332CE7D921C3E0380056B821 /* LocationState.swift in Sources */,
 				8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */,
-				33BF448F21C7CF930019FB7E /* TimeTriggerState.swift in Sources */,
+				33BF448F21C7CF930019FB7E /* TimeState.swift in Sources */,
 				8A8AFFDB21B70EE6001E1C6D /* LoggingMiddleware.swift in Sources */,
 				8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */,
 				8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */,
 				8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */,
 				8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */,
-				3359071021CA28680002A0A6 /* EnableSettingCell.swift in Sources */,
 				8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */,
 				8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */,
 			);
@@ -696,7 +703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Z7U84UV62;
+				DEVELOPMENT_TEAM = 2RGJ924YXG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -718,7 +725,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Z7U84UV62;
+				DEVELOPMENT_TEAM = 2RGJ924YXG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

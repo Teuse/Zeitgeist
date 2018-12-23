@@ -33,6 +33,9 @@ class HistoryViewController: UITableViewController
     }
 }
 
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
+
 extension HistoryViewController: StoreSubscriber
 {
     func newState(state: AppState)

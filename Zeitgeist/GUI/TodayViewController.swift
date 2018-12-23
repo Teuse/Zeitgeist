@@ -39,7 +39,6 @@ class TodayViewController: UIViewController
     }
     
     // --------------------------------------------------------------------------------
-    // Mark: - Actions
     
     @IBAction func onStartButton(_ sender: Any)
     {
@@ -59,7 +58,7 @@ class TodayViewController: UIViewController
     }
     
     // --------------------------------------------------------------------------------
-    // Mark: - Update UI
+
     private func updateUI()
     {
         if let record = record {
@@ -84,6 +83,9 @@ class TodayViewController: UIViewController
         }
     }
 }
+
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
 
 extension TodayViewController: StoreSubscriber
 {

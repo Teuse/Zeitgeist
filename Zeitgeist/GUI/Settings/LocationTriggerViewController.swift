@@ -7,9 +7,13 @@ class LocationTriggerViewController: UIViewController
    @IBOutlet weak var startToPicker: UIDatePicker!
    @IBOutlet weak var endFromPicker: UIDatePicker!
    @IBOutlet weak var endToPicker: UIDatePicker!
+
+   // --------------------------------------------------------------------------------
    
-   override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
+   override func viewWillAppear(_ animated: Bool)
+   {
+      title = "Select Timespan"
+
       subscribe(self) { subcription in
          subcription.select { state in state.locationTriggerState }
       }
@@ -20,9 +24,7 @@ class LocationTriggerViewController: UIViewController
       unsubscribe(self)
    }
 
-   override func viewDidLoad() {
-      title = "Select Timespan"
-   }
+   // --------------------------------------------------------------------------------
 
    @IBAction func onStartChanged(_ sender: UIDatePicker)
    {
@@ -53,9 +55,12 @@ class LocationTriggerViewController: UIViewController
    }
 }
 
+// --------------------------------------------------------------------------------
+//MARK: - ReSwift
+
 extension LocationTriggerViewController: StoreSubscriber
 {
-   func newState(state: LocationTriggerState)
+   func newState(state: LocationState)
    {
       update(picker: startFromPicker, withTime: state.startTimeFrame.start)
       update(picker: startToPicker, withTime: state.startTimeFrame.end)
