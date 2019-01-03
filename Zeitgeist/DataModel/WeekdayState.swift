@@ -1,6 +1,6 @@
 import ReSwift
 
-struct WeekdayTriggerState: StateType, Codable
+struct WeekdayState: StateType, Codable
 {
    let weekdayTrigger = WeekTrigger()
 }
@@ -8,10 +8,10 @@ struct WeekdayTriggerState: StateType, Codable
 // --------------------------------------------------------------------------------
 //MARK: - Reducer
 
-extension WeekdayTriggerState
+extension WeekdayState
 {
-   static func reducer(action: Action, state: WeekdayTriggerState?) -> WeekdayTriggerState {
-      let state = state ?? WeekdayTriggerState()
+   static func reducer(action: Action, state: WeekdayState?) -> WeekdayState {
+      let state = state ?? WeekdayState()
 
       switch action {
       case is ReSwiftInit:

@@ -6,17 +6,8 @@ class TriggerManager
    private var timer = Timer()
 
    private let locationProcessor = LocationProcessor()
-
-   private lazy var startTimeTrigger: TimeProcessor = {
-      return TimeProcessor() { [weak self] in
-         self?.print()
-      }
-   }()
-   private lazy var endTimeTrigger: TimeProcessor = {
-      return TimeProcessor() { [weak self] in
-         self?.print()
-      }
-   }()
+   private let startTimeTrigger = TimeProcessor()
+   private let endTimeTrigger = TimeProcessor()
 
    func print() {
       
@@ -26,6 +17,9 @@ class TriggerManager
 
    init(store: Store<AppState>) {
       self.store = store
+      locationProcessor.deleate = self
+      startTimeTrigger.deleate = self
+      endTimeTrigger.deleate = self
       setup()
    }
 
@@ -39,6 +33,11 @@ class TriggerManager
 
       timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block:
          {[weak self] _ in self?.runLoop() })
+   }
+
+   func checkTrigger() -> Bool
+   {
+      return false
    }
 
    // --------------------------------------------------------------------------------
@@ -58,6 +57,19 @@ extension TriggerManager: StoreSubscriber
 
 //      endTimeTrigger.enabled = state.endTimeTrigger.enabled
 //      startTimeTrigger.setTime(state.endTimeTrigger.time)
+   }
+}
+
+extension TriggerManager: ProcessorDelegate
+{
+   func processorTriggeredStart()
+   {
+      store.dispatch(StartAction())
+   }
+
+   func processorTriggeredEnd()
+   {
+      store.dispatch(StopAction())
    }
 }
 

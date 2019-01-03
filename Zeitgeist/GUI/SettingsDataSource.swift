@@ -70,9 +70,9 @@ class SettingsDataSource
          Setting(name: "Select Time", destinationId: "TimeTriggerVC"),
       ]
       
-      var sec3 = Section(name: "Weekday Selection")
+      var sec3 = Section(name: "Trigger Filter")
       sec3.settings = [
-         Setting(name: "Select Repetition", destinationId: "WeekdayVC"),
+         Setting(name: "Weekday Selection", destinationId: "WeekdayVC"),
       ]
       
       return [sec1, sec2, sec3]

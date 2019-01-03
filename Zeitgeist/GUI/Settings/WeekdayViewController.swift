@@ -10,7 +10,7 @@ class WeekdayViewController: UIViewController
    {
       super.viewWillAppear(animated)
       subscribe(self) { subcription in
-         subcription.select { state in state.weekdayTriggerState }
+         subcription.select { state in state.weekdayState }
       }
       tableView.delegate = self
       tableView.dataSource = self
@@ -29,7 +29,7 @@ class WeekdayViewController: UIViewController
 
 extension WeekdayViewController: StoreSubscriber
 {
-   func newState(state: WeekdayTriggerState)
+   func newState(state: WeekdayState)
    {
       weekTrigger = state.weekdayTrigger
       tableView.reloadData()

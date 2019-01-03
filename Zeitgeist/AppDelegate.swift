@@ -12,6 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
    {
+      UIApplication.shared.setMinimumBackgroundFetchInterval(300)
+
       if launchOptions?[.location] != nil {
          print("Application launched by CoreLocation")
       }
@@ -21,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       triggerManager = TriggerManager(store: appStore)
       return true
+   }
+
+   func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+      // Check for new data.
+      let triggered = triggerManager.checkTrigger()
+
+      completionHandler(triggered ? .newData : .noData)
    }
 
    func applicationWillResignActive(_ application: UIApplication) {
@@ -41,7 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       DBAccess.shared.save()
       save()
    }
+}
 
+// --------------------------------------------------------------------------------
+//MARK: - Persist AppState
+
+extension AppDelegate
+{
    private var appStatePath: URL {
       let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
       return docDir.appendingPathComponent("AppState.json")
@@ -52,9 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       do {
          let payload: Data = try JSONEncoder().encode(appStore.state)
          try payload.write(to: appStatePath, options: .atomic)
+         print("AppState successfully saved to \(appStatePath)")
       }
       catch {
-         print("SessionFiles::saveSession: Failed to save Session to path \(appStatePath) with error \(error.localizedDescription)")
+         print("Error: Failed to save AppState to path \(appStatePath) with error \(error.localizedDescription)")
       }
    }
 
@@ -62,10 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    {
       do {
          let payload = try Data(contentsOf: appStatePath)
-         return try JSONDecoder().decode(AppState.self, from: payload)
+         let appState = try JSONDecoder().decode(AppState.self, from: payload)
+         print("AppState successfully loaded from \(appStatePath)")
+         return appState
       }
       catch {
-         print("SessionFiles::loadSession: Failed to load Session at path \(appStatePath) with error \(error.localizedDescription)")
+         print("Error: Failed to load AppState at path \(appStatePath) with error \(error.localizedDescription)")
       }
       return nil
    }

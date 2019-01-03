@@ -15,7 +15,7 @@ class EnableLocationCell: UIViewController
    {
       super.viewWillAppear(animated)
       subscribe(self) { subcription in
-         subcription.select { state in state.locationTriggerState }
+         subcription.select { state in state.locationState }
       }
       authStatus = CLLocationManager.authorizationStatus()
       locationManager.delegate = self

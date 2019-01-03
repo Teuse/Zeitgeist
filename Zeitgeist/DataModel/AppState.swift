@@ -2,9 +2,9 @@ import ReSwift
 
 struct AppState: StateType, Codable
 {
-   var locationTriggerState = LocationState()
-   var timeTriggerState = TimeState()
-   var weekdayTriggerState = WeekdayTriggerState()
+   var locationState = LocationState()
+   var timeState = TimeState()
+   var weekdayState = WeekdayState()
 
    var currentRecord: Record? {
       return DBAccess.shared.getToday()
@@ -18,9 +18,9 @@ extension AppState
 {
    static func reducer(action: Action, state: AppState?) -> AppState {
       var state = state ?? AppState()
-      state.locationTriggerState = LocationState.reducer(action: action, state: state.locationTriggerState)
-      state.timeTriggerState = TimeState.reducer(action: action, state: state.timeTriggerState)
-      state.weekdayTriggerState = WeekdayTriggerState.reducer(action: action, state: state.weekdayTriggerState)
+      state.locationState = LocationState.reducer(action: action, state: state.locationState)
+      state.timeState = TimeState.reducer(action: action, state: state.timeState)
+      state.weekdayState = WeekdayState.reducer(action: action, state: state.weekdayState)
 
       switch action {
       //        case is ReSwiftInit:

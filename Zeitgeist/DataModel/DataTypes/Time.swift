@@ -1,12 +1,12 @@
 import Foundation
 
 struct TimeFrame: Codable {
-   var start = Time()
+   var begin = Time()
    var end = Time()
 
    init() {}
    init(startHour: Int, endHour: Int) {
-      self.start.hour = startHour
+      self.begin.hour = startHour
       self.end.hour = endHour
    }
 }
@@ -19,6 +19,11 @@ struct Time: Codable {
    init(hour: Int, minute: Int) {
       self.hour = hour
       self.minute = minute
+   }
+   init(date: Date) {
+      let comp = Calendar.current.dateComponents([.hour, .minute], from: date)
+      self.hour = comp.hour ?? 0
+      self.minute = comp.minute ?? 0
    }
 
    mutating func addMinutes(_ min: Int)

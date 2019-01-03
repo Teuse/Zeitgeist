@@ -11,7 +11,7 @@ class EnableTimeCell: UIViewController
    {
       super.viewWillAppear(animated)
       subscribe(self) { subcription in
-         subcription.select { state in state.timeTriggerState }
+         subcription.select { state in state.timeState }
       }
    }
    

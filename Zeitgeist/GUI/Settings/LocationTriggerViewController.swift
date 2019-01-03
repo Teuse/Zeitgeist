@@ -15,7 +15,7 @@ class LocationTriggerViewController: UIViewController
       title = "Select Timespan"
 
       subscribe(self) { subcription in
-         subcription.select { state in state.locationTriggerState }
+         subcription.select { state in state.locationState }
       }
    }
 
@@ -31,7 +31,7 @@ class LocationTriggerViewController: UIViewController
       var timeFrame = TimeFrame()
 
       let fromComp = Calendar.current.dateComponents([.hour, .minute], from: startFromPicker.date)
-      timeFrame.start = Time(hour: fromComp.hour ?? 0, minute: fromComp.minute ?? 0)
+      timeFrame.begin = Time(hour: fromComp.hour ?? 0, minute: fromComp.minute ?? 0)
 
       let toComp = Calendar.current.dateComponents([.hour, .minute], from: startToPicker.date)
       timeFrame.end = Time(hour: toComp.hour ?? 0, minute: toComp.minute ?? 0)
@@ -45,7 +45,7 @@ class LocationTriggerViewController: UIViewController
       var timeFrame = TimeFrame()
 
       let fromComp = Calendar.current.dateComponents([.hour, .minute], from: endFromPicker.date)
-      timeFrame.start = Time(hour: fromComp.hour ?? 0, minute: fromComp.minute ?? 0)
+      timeFrame.begin = Time(hour: fromComp.hour ?? 0, minute: fromComp.minute ?? 0)
 
       let toComp = Calendar.current.dateComponents([.hour, .minute], from: endToPicker.date)
       timeFrame.end = Time(hour: toComp.hour ?? 0, minute: toComp.minute ?? 0)
@@ -62,9 +62,9 @@ extension LocationTriggerViewController: StoreSubscriber
 {
    func newState(state: LocationState)
    {
-      update(picker: startFromPicker, withTime: state.startTimeFrame.start)
+      update(picker: startFromPicker, withTime: state.startTimeFrame.begin)
       update(picker: startToPicker, withTime: state.startTimeFrame.end)
-      update(picker: endFromPicker, withTime: state.endTimeFrame.start)
+      update(picker: endFromPicker, withTime: state.endTimeFrame.begin)
       update(picker: endToPicker, withTime: state.endTimeFrame.end)
    }
 

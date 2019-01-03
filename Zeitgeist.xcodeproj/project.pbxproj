@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		332CE7D521C3DB1B0056B821 /* LocationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D421C3DB1B0056B821 /* LocationActions.swift */; };
-		332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */; };
+		332CE7D821C3E0380056B821 /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D621C3E0380056B821 /* WeekdayState.swift */; };
 		332CE7D921C3E0380056B821 /* LocationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332CE7D721C3E0380056B821 /* LocationState.swift */; };
+		3378490221D207AA00ACD706 /* ProcessorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378490121D207AA00ACD706 /* ProcessorProtocol.swift */; };
 		337DB11B21D025CF00960CFB /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337DB11A21D025CF00960CFB /* Coordinate.swift */; };
 		337FC72721CEC93E007B4BF7 /* EnableLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337FC72521CEC93E007B4BF7 /* EnableLocationCell.swift */; };
 		337FC72821CEC93E007B4BF7 /* EnableTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337FC72621CEC93E007B4BF7 /* EnableTimeCell.swift */; };
@@ -77,8 +78,9 @@
 
 /* Begin PBXFileReference section */
 		332CE7D421C3DB1B0056B821 /* LocationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationActions.swift; sourceTree = "<group>"; };
-		332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayTriggerState.swift; sourceTree = "<group>"; };
+		332CE7D621C3E0380056B821 /* WeekdayState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayState.swift; sourceTree = "<group>"; };
 		332CE7D721C3E0380056B821 /* LocationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationState.swift; sourceTree = "<group>"; tabWidth = 3; };
+		3378490121D207AA00ACD706 /* ProcessorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessorProtocol.swift; sourceTree = "<group>"; };
 		337DB11A21D025CF00960CFB /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		337FC72521CEC93E007B4BF7 /* EnableLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableLocationCell.swift; sourceTree = "<group>"; };
 		337FC72621CEC93E007B4BF7 /* EnableTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnableTimeCell.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */,
 				8A3E864821BA969800AD9E38 /* TimeProcessor.swift */,
 				8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */,
+				3378490121D207AA00ACD706 /* ProcessorProtocol.swift */,
 			);
 			path = TriggerProcessor;
 			sourceTree = "<group>";
@@ -306,7 +309,7 @@
 				332CE7D421C3DB1B0056B821 /* LocationActions.swift */,
 				33BF448E21C7CF930019FB7E /* TimeState.swift */,
 				33BF449021C7D0EE0019FB7E /* TimeActions.swift */,
-				332CE7D621C3E0380056B821 /* WeekdayTriggerState.swift */,
+				332CE7D621C3E0380056B821 /* WeekdayState.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -517,7 +520,7 @@
 				8A3E864B21BA96A200AD9E38 /* LocationProcessor.swift in Sources */,
 				8A3E864D21BA991900AD9E38 /* WeekdayViewController.swift in Sources */,
 				8A3E864921BA969800AD9E38 /* TimeProcessor.swift in Sources */,
-				332CE7D821C3E0380056B821 /* WeekdayTriggerState.swift in Sources */,
+				332CE7D821C3E0380056B821 /* WeekdayState.swift in Sources */,
 				8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */,
 				8A8AFFBA21B703D7001E1C6D /* Zeitgeist.xcdatamodeld in Sources */,
 				33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */,
@@ -536,6 +539,7 @@
 				332CE7D521C3DB1B0056B821 /* LocationActions.swift in Sources */,
 				8A3E864521BA557500AD9E38 /* MapViewController.swift in Sources */,
 				337DB11B21D025CF00960CFB /* Coordinate.swift in Sources */,
+				3378490221D207AA00ACD706 /* ProcessorProtocol.swift in Sources */,
 				8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */,
 				332CE7D921C3E0380056B821 /* LocationState.swift in Sources */,
 				8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */,

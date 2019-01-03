@@ -9,6 +9,7 @@ struct LocationState: StateType, Codable
    var region = false
    var currentLocation = Coordinate(latitude: 52.520008, longitude: 13.404954)
 
+   var timeFrameEnabled = true
    var startTimeFrame = TimeFrame(startHour: 6, endHour: 10)
    var endTimeFrame = TimeFrame(startHour: 15, endHour: 18)
 
