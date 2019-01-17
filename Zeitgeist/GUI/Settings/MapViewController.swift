@@ -114,10 +114,10 @@ extension MapViewController: MKMapViewDelegate
 {
    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool)
    {
-      guard !CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) else {
-         assertionFailure("MapViewController: No monitoring available!")
-         return
-      }
+//      guard !CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) else {
+//         assertionFailure("MapViewController: No monitoring available!")
+//         return
+//      }
 
       let action = LocationActions.UpdateMonitoringRegion(
          coordinate: mapView.centerCoordinate, radius: getRadius())
