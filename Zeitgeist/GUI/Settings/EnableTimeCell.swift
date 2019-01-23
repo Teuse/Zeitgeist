@@ -3,7 +3,7 @@ import ReSwift
 
 class EnableTimeCell: UIViewController
 {
-   @IBOutlet weak var enableSwitch: UISwitch!
+   @IBOutlet private weak var enableSwitch: UISwitch!
 
    // --------------------------------------------------------------------------------
 

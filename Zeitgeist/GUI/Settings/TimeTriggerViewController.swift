@@ -5,8 +5,8 @@ import CoreLocation
 
 class TimeTriggerViewController: UIViewController
 {
-   @IBOutlet weak var beginPicker: UIDatePicker!
-   @IBOutlet weak var endPicker: UIDatePicker!
+   @IBOutlet private weak var beginPicker: UIDatePicker!
+   @IBOutlet private weak var endPicker: UIDatePicker!
 
    // --------------------------------------------------------------------------------
 

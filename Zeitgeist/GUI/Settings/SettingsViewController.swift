@@ -5,7 +5,7 @@ class SettingsViewController: UIViewController
 {
    private let settings = SettingsDataSource()
  
-   @IBOutlet weak var tableView: UITableView!
+   @IBOutlet private weak var tableView: UITableView!
    
    override func viewWillAppear(_ animated: Bool)
    {

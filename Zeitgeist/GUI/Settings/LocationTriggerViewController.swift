@@ -3,10 +3,10 @@ import ReSwift
 
 class LocationTriggerViewController: UIViewController
 {
-   @IBOutlet weak var startFromPicker: UIDatePicker!
-   @IBOutlet weak var startToPicker: UIDatePicker!
-   @IBOutlet weak var endFromPicker: UIDatePicker!
-   @IBOutlet weak var endToPicker: UIDatePicker!
+   @IBOutlet private weak var startFromPicker: UIDatePicker!
+   @IBOutlet private weak var startToPicker: UIDatePicker!
+   @IBOutlet private weak var endFromPicker: UIDatePicker!
+   @IBOutlet private weak var endToPicker: UIDatePicker!
 
    // --------------------------------------------------------------------------------
    

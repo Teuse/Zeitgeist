@@ -9,10 +9,10 @@ class MapViewController: UIViewController
    var selectedLocation = Coordinate()
    var timer: Timer?
 
-   @IBOutlet weak var mapView: MKMapView!
-   @IBOutlet weak var searchRadiusLabel: UILabel!
-   @IBOutlet weak var centerPositionButton: UIButton!
-   @IBOutlet weak var circleImage: UIImageView!
+   @IBOutlet private weak var mapView: MKMapView!
+   @IBOutlet private weak var searchRadiusLabel: UILabel!
+   @IBOutlet private weak var centerPositionButton: UIButton!
+   @IBOutlet private weak var circleImage: UIImageView!
 
    // --------------------------------------------------------------------------------
 

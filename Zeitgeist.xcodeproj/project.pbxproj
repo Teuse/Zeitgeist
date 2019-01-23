@@ -18,6 +18,9 @@
 		33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */; };
 		33BF448F21C7CF930019FB7E /* TimeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448E21C7CF930019FB7E /* TimeState.swift */; };
 		33BF449121C7D0EF0019FB7E /* TimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF449021C7D0EE0019FB7E /* TimeActions.swift */; };
+		8A29F67721F65A2F00D23A12 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A29F67621F65A2F00D23A12 /* History.storyboard */; };
+		8A29F67A21F65BC500D23A12 /* Recording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A29F67921F65BC500D23A12 /* Recording.storyboard */; };
+		8A29F67C21F65D7200D23A12 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29F67B21F65D7200D23A12 /* Recording.swift */; };
 		8A3E864521BA557500AD9E38 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864421BA557500AD9E38 /* MapViewController.swift */; };
 		8A3E864921BA969800AD9E38 /* TimeProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864821BA969800AD9E38 /* TimeProcessor.swift */; };
 		8A3E864B21BA96A200AD9E38 /* LocationProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */; };
@@ -40,11 +43,8 @@
 		8A8AFFD921B70D96001E1C6D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFD821B70D96001E1C6D /* AppState.swift */; };
 		8A8AFFDB21B70EE6001E1C6D /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFDA21B70EE6001E1C6D /* LoggingMiddleware.swift */; };
 		8A8AFFDD21B7101A001E1C6D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFDC21B7101A001E1C6D /* UIViewControllerExtension.swift */; };
-		8A8AFFE521B71293001E1C6D /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE021B71292001E1C6D /* PauseButton.png */; };
-		8A8AFFE621B71293001E1C6D /* StopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE121B71292001E1C6D /* StopButton.png */; };
 		8A8AFFE721B71293001E1C6D /* Evomotiv.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE221B71292001E1C6D /* Evomotiv.png */; };
 		8A8AFFE821B71293001E1C6D /* EvomotivLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */; };
-		8A8AFFE921B71293001E1C6D /* StartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE421B71292001E1C6D /* StartButton.png */; };
 		8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */; };
 		8A8AFFED21B727F6001E1C6D /* AppStateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */; };
 		8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */; };
@@ -55,6 +55,8 @@
 		8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */; };
 		8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7621BD4E14008B0F8D /* Time.swift */; };
 		8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7821BD4E4E008B0F8D /* Week.swift */; };
+		8AE8935921F6ED34004B83FC /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8935821F6ED34004B83FC /* RecordingCell.swift */; };
+		8AEDC36221F62D0A00DF92FB /* TimeRecording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDC36121F62D0A00DF92FB /* TimeRecording.storyboard */; };
 		8AF6414D21CC108E00F5326E /* SettingsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */; };
 		8AF8223421BE3AD900C4247E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8223321BE3AD900C4247E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,9 @@
 		33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		33BF448E21C7CF930019FB7E /* TimeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeState.swift; sourceTree = "<group>"; };
 		33BF449021C7D0EE0019FB7E /* TimeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeActions.swift; sourceTree = "<group>"; };
+		8A29F67621F65A2F00D23A12 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		8A29F67921F65BC500D23A12 /* Recording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recording.storyboard; sourceTree = "<group>"; };
+		8A29F67B21F65D7200D23A12 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		8A3E864421BA557500AD9E38 /* MapViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864821BA969800AD9E38 /* TimeProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProcessor.swift; sourceTree = "<group>"; };
@@ -116,11 +121,8 @@
 		8A8AFFD821B70D96001E1C6D /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A8AFFDA21B70EE6001E1C6D /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
 		8A8AFFDC21B7101A001E1C6D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		8A8AFFE021B71292001E1C6D /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
-		8A8AFFE121B71292001E1C6D /* StopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StopButton.png; sourceTree = "<group>"; };
 		8A8AFFE221B71292001E1C6D /* Evomotiv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Evomotiv.png; sourceTree = "<group>"; };
 		8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EvomotivLogo.png; sourceTree = "<group>"; };
-		8A8AFFE421B71292001E1C6D /* StartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartButton.png; sourceTree = "<group>"; };
 		8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBAccess.swift; sourceTree = "<group>"; };
 		8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStateActions.swift; sourceTree = "<group>"; };
 		8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicates.swift; sourceTree = "<group>"; };
@@ -131,6 +133,8 @@
 		8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TriggerManager.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7621BD4E14008B0F8D /* Time.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7821BD4E4E008B0F8D /* Week.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; tabWidth = 3; };
+		8AE8935821F6ED34004B83FC /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		8AEDC36121F62D0A00DF92FB /* TimeRecording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeRecording.storyboard; sourceTree = "<group>"; };
 		8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataSource.swift; sourceTree = "<group>"; };
 		8AF8223321BE3AD900C4247E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,9 +197,30 @@
 			path = TriggerProcessor;
 			sourceTree = "<group>";
 		};
+		8A29F67521F659FB00D23A12 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				8A29F67621F65A2F00D23A12 /* History.storyboard */,
+				8A8AFFC621B70980001E1C6D /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		8A29F67821F65BAB00D23A12 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				8A29F67921F65BC500D23A12 /* Recording.storyboard */,
+				8A29F67B21F65D7200D23A12 /* Recording.swift */,
+				8AE8935821F6ED34004B83FC /* RecordingCell.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
 		8A80EE7321B84C3E00CAE80C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				8A8AFFC521B70980001E1C6D /* SettingsViewController.swift */,
+				8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */,
 				8AF8223321BE3AD900C4247E /* Settings.storyboard */,
 				8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */,
 				8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */,
@@ -287,13 +312,12 @@
 		8A8AFFAF21B703D7001E1C6D /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				8AEDC36021F62C0000DF92FB /* TimeRecording */,
+				8A29F67521F659FB00D23A12 /* History */,
 				8A80EE7321B84C3E00CAE80C /* Settings */,
+				8A29F67821F65BAB00D23A12 /* Recording */,
 				8A8AFFB121B703D7001E1C6D /* Main.storyboard */,
 				8A8AFFB021B703D7001E1C6D /* RootViewController.swift */,
-				8A8AFFC421B70980001E1C6D /* TodayViewController.swift */,
-				8A8AFFC621B70980001E1C6D /* HistoryViewController.swift */,
-				8A8AFFC521B70980001E1C6D /* SettingsViewController.swift */,
-				8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -326,11 +350,8 @@
 			isa = PBXGroup;
 			children = (
 				33883AA121CD0EAF0010C2F7 /* SearchRadius.png */,
-				8A8AFFE021B71292001E1C6D /* PauseButton.png */,
-				8A8AFFE121B71292001E1C6D /* StopButton.png */,
 				8A8AFFE221B71292001E1C6D /* Evomotiv.png */,
 				8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */,
-				8A8AFFE421B71292001E1C6D /* StartButton.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -344,6 +365,15 @@
 				8A8AFFF521B7F466001E1C6D /* DateTimeStrings.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		8AEDC36021F62C0000DF92FB /* TimeRecording */ = {
+			isa = PBXGroup;
+			children = (
+				8AEDC36121F62D0A00DF92FB /* TimeRecording.storyboard */,
+				8A8AFFC421B70980001E1C6D /* TodayViewController.swift */,
+			);
+			path = TimeRecording;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,13 +489,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEDC36221F62D0A00DF92FB /* TimeRecording.storyboard in Resources */,
 				33883AA221CD0EB00010C2F7 /* SearchRadius.png in Resources */,
 				8A8AFFB521B703D7001E1C6D /* LaunchScreen.storyboard in Resources */,
+				8A29F67A21F65BC500D23A12 /* Recording.storyboard in Resources */,
+				8A29F67721F65A2F00D23A12 /* History.storyboard in Resources */,
 				8A8AFFE721B71293001E1C6D /* Evomotiv.png in Resources */,
-				8A8AFFE621B71293001E1C6D /* StopButton.png in Resources */,
 				8A8AFFB621B703D7001E1C6D /* Assets.xcassets in Resources */,
-				8A8AFFE921B71293001E1C6D /* StartButton.png in Resources */,
-				8A8AFFE521B71293001E1C6D /* PauseButton.png in Resources */,
 				8A8AFFE821B71293001E1C6D /* EvomotivLogo.png in Resources */,
 				8A8AFFB921B703D7001E1C6D /* Main.storyboard in Resources */,
 				8A8AFFBF21B70482001E1C6D /* Default-568h@2x.png in Resources */,
@@ -543,10 +573,12 @@
 				8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */,
 				332CE7D921C3E0380056B821 /* LocationState.swift in Sources */,
 				8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */,
+				8AE8935921F6ED34004B83FC /* RecordingCell.swift in Sources */,
 				33BF448F21C7CF930019FB7E /* TimeState.swift in Sources */,
 				8A8AFFDB21B70EE6001E1C6D /* LoggingMiddleware.swift in Sources */,
 				8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */,
 				8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */,
+				8A29F67C21F65D7200D23A12 /* Recording.swift in Sources */,
 				8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */,
 				8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */,
 				8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */,
@@ -707,7 +739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2RGJ924YXG;
+				DEVELOPMENT_TEAM = 2Z7U84UV62;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -729,7 +761,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2RGJ924YXG;
+				DEVELOPMENT_TEAM = 2Z7U84UV62;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

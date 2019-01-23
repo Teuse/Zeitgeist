@@ -9,8 +9,8 @@ class LocationSelectionViewController: UIViewController
 //   var fixItems = [String]()
    var searchItems = [MKMapItem]()
    
-   @IBOutlet weak var searchBar: UISearchBar!
-   @IBOutlet weak var tableView: UITableView!
+   @IBOutlet private weak var searchBar: UISearchBar!
+   @IBOutlet private weak var tableView: UITableView!
 
    // --------------------------------------------------------------------------------
 
