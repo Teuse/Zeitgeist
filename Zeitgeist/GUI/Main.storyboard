@@ -42,7 +42,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ibL-KE-scu">
             <objects>
-                <tabBarController id="k8v-Oz-3qR" sceneMemberID="viewController">
+                <tabBarController id="k8v-Oz-3qR" customClass="TabBarController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="jdm-IA-eBO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="392" y="305"/>
         </scene>
-        <!--History-->
+        <!--Calendar-->
         <scene sceneID="qm6-KD-o0d">
             <objects>
-                <viewControllerPlaceholder storyboardName="History" id="GB1-hG-cgh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Calendar" id="GB1-hG-cgh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="AYp-jT-0c1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUM-oU-bbz" userLabel="First Responder" sceneMemberID="firstResponder"/>

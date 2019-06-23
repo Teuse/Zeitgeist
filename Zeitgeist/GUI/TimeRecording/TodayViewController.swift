@@ -3,7 +3,7 @@ import ReSwift
 
 class TodayViewController: UIViewController
 {
-   var record: Record?
+   var state = RecordingState()
    var timer : Timer!
    
    @IBOutlet private weak var dateLabel: UILabel!
@@ -17,12 +17,16 @@ class TodayViewController: UIViewController
    @IBOutlet private weak var pauseButton: UIButton!
    @IBOutlet private weak var checkmarkButton: UIButton!
    
+   @IBOutlet private weak var buttonsContainer: UIView!
+   
    // --------------------------------------------------------------------------------
    
    override func viewWillAppear(_ animated: Bool)
    {
       super.viewWillAppear(animated)
-      subscribe(self)
+      subscribe(self) { subcription in
+         subcription.select { state in state.recordingState }
+      }
       timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { _ in self.runLoop() })
    }
    
@@ -35,7 +39,7 @@ class TodayViewController: UIViewController
    
    func runLoop()
    {
-      if let record = record, !record.isFinished {
+      if let record = state.record, !record.isFinished {
          durationLabel.text = durationString(from: record.duration)
       }
    }
@@ -44,47 +48,44 @@ class TodayViewController: UIViewController
    
    @IBAction func onStartButton(_ sender: UIButton)
    {
-      assert(record == nil, "The button should be hidden")
-      dispatch(action: StartAction())
-   }
-   
-   @IBAction func onStopButton(_ sender: UIButton)
-   {
-      assert(record != nil, "The button should be hidden")
-      dispatch(action: StopAction())
+      dispatch(action: RecordingActions.Start())
    }
    
    @IBAction func onPauseButton(_ sender: UIButton)
    {
-      //        if let datum = appState.selectedDatum {
-      //            dispatch(action: Stop(datum: datum))
-      //        }
+      if state.isPaused {
+         dispatch(action: RecordingActions.StopPause())
+      } else {
+         dispatch(action: RecordingActions.StartPause())
+      }
    }
    
    @IBAction func onCheckmarkButton(_ sender: UIButton) {
-      
+      dispatch(action: RecordingActions.RunAnimation())
    }
    
    // --------------------------------------------------------------------------------
    
    private func updateUI()
    {
-      if let record = record {
+      if let record = state.record
+      {
          dateLabel.text = dateString(from: record.begin!)
          startLabel.text = timeString(from: record.begin!)
          durationLabel.text = durationString(from: record.duration)
-         pauseLabel.text = "-"
-         overtimeLabel.text = "-"
+         pauseLabel.text = "0:00"
+         overtimeLabel.text = "0:00"
          
          startButton.isHidden = true
          stopButton.isHidden = record.isFinished
          pauseButton.isHidden = record.isFinished
          checkmarkButton.isHidden = !record.isFinished
+         buttonsContainer.isHidden = true
       }
       else {
          dateLabel.text = dateString(from: Date())
          startLabel.text = "-"
-         durationLabel.text = "-"
+         durationLabel.text = "0:00"
          overtimeLabel.text = "-"
          pauseLabel.text = "-"
          
@@ -92,6 +93,7 @@ class TodayViewController: UIViewController
          stopButton.isHidden = true
          pauseButton.isHidden = true
          checkmarkButton.isHidden = true
+         buttonsContainer.isHidden = false
       }
    }
 }
@@ -101,9 +103,9 @@ class TodayViewController: UIViewController
 
 extension TodayViewController: StoreSubscriber
 {
-   func newState(state: AppState)
+   func newState(state: RecordingState)
    {
-      record = state.currentRecord
+      self.state = state
       updateUI()
    }
 }

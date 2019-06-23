@@ -64,12 +64,12 @@ extension TriggerManager: ProcessorDelegate
 {
    func processorTriggeredStart()
    {
-      store.dispatch(StartAction())
+      store.dispatch(RecordingActions.Start())
    }
 
    func processorTriggeredEnd()
    {
-      store.dispatch(StopAction())
+      store.dispatch(RecordingActions.Stop())
    }
 }
 

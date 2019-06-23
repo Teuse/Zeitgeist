@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIK-B0-o3A">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="N0q-G1-tTs">
+            <objects>
+                <tableViewController id="F0c-eP-vOw" customClass="HistoryViewController" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bZ4-T0-Ro7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryRecordCell" id="E9W-bs-ZJz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E9W-bs-ZJz" id="J6A-VU-4Xa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="o8b-91-4xV" kind="showDetail" id="QRg-n1-Evn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F0c-eP-vOw" id="X3U-OG-DXr"/>
+                            <outlet property="delegate" destination="F0c-eP-vOw" id="gJY-ai-WBA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="History" id="OeA-FN-daO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDJ-vo-TYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="376"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="onW-hD-J9h">
+            <objects>
+                <navigationController id="AIK-B0-o3A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="IconDate" id="9mQ-PQ-zQz">
+                        <color key="badgeColor" red="0.91372549020000005" green="0.45098039220000002" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="o76-zF-wDj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F0c-eP-vOw" kind="relationship" relationship="rootViewController" id="cjb-w4-BWR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zt-wh-2R2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="376"/>
+        </scene>
+        <!--Record Details-->
+        <scene sceneID="Rmg-cn-Kzt">
+            <objects>
+                <viewController title="Record Details" id="o8b-91-4xV" customClass="RecordSumamry" customModule="Zeitgeist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DL1-SJ-7Pd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxs-PW-k1j">
+                                <rect key="frame" x="52" y="10" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="7rD-3f-Hez"/>
+                                    <constraint firstAttribute="height" constant="48" id="D2d-fZ-A9h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="UjR-L1-FwT"/>
+                                    <constraint firstAttribute="width" constant="48" id="hgs-c0-NXk"/>
+                                </constraints>
+                                <state key="normal" image="ButtonTodaySick"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7C-i2-rF6">
+                                <rect key="frame" x="154" y="51" width="67" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="HRL-ZV-AM5"/>
+                                    <constraint firstAttribute="height" constant="21" id="M6g-Rf-z3P"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="dST-e0-RlO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="mYu-eh-8wh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUe-nH-veW">
+                                <rect key="frame" x="165" y="10" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="M3R-Dt-nSB"/>
+                                    <constraint firstAttribute="width" constant="44" id="ahG-wr-7ma"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="bTB-Gx-7KD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="iIQ-BK-WRS"/>
+                                </constraints>
+                                <state key="normal" image="ButtonTodayVacation"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtK-4f-5s9">
+                                <rect key="frame" x="42" y="50" width="68" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="ErF-sx-iwm"/>
+                                    <constraint firstAttribute="width" constant="68" id="GeD-b1-BAZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="68" id="JGL-wa-UhT"/>
+                                    <constraint firstAttribute="height" constant="22" id="otv-59-4DU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sickness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-Y4-yYX">
+                                <rect key="frame" x="264" y="51" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="31T-hS-WA5"/>
+                                    <constraint firstAttribute="height" constant="21" id="pcL-i9-4aH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNz-vb-3vd">
+                                <rect key="frame" x="275" y="10" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="2sX-QY-v3y"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="E9r-Yz-Bcl"/>
+                                    <constraint firstAttribute="height" constant="44" id="IpR-Kl-NuH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="U6s-7H-7Nt"/>
+                                </constraints>
+                                <state key="normal" image="ButtonTodaySick"/>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kk-WT-ECd">
+                                <rect key="frame" x="0.0" y="80" width="375" height="474"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92241633619999996" blue="0.83850307950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8kk-WT-ECd" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="80" id="02Y-wc-v8L"/>
+                            <constraint firstItem="8kk-WT-ECd" firstAttribute="leading" secondItem="dUQ-AZ-9iH" secondAttribute="leading" id="1ug-Ux-Vqa"/>
+                            <constraint firstItem="lNz-vb-3vd" firstAttribute="leading" secondItem="oUe-nH-veW" secondAttribute="trailing" constant="66" id="9Cg-3m-Va7"/>
+                            <constraint firstItem="Vys-Y4-yYX" firstAttribute="leading" secondItem="K7C-i2-rF6" secondAttribute="trailing" constant="43" id="D7Y-cI-EYN"/>
+                            <constraint firstItem="lNz-vb-3vd" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="10" id="Ebj-le-lmL"/>
+                            <constraint firstItem="oUe-nH-veW" firstAttribute="leading" secondItem="OtK-4f-5s9" secondAttribute="trailing" constant="55" id="GKW-tE-dwA"/>
+                            <constraint firstItem="bxs-PW-k1j" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="10" id="OJO-Bi-z5z"/>
+                            <constraint firstItem="K7C-i2-rF6" firstAttribute="leading" secondItem="OtK-4f-5s9" secondAttribute="trailing" constant="44" id="OR0-UK-MHD"/>
+                            <constraint firstItem="OtK-4f-5s9" firstAttribute="leading" secondItem="dUQ-AZ-9iH" secondAttribute="leading" constant="42" id="PuF-75-kII"/>
+                            <constraint firstItem="oUe-nH-veW" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="10" id="T5j-3b-kzQ"/>
+                            <constraint firstItem="OtK-4f-5s9" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="50" id="Vol-MX-LD3"/>
+                            <constraint firstItem="8kk-WT-ECd" firstAttribute="trailing" secondItem="dUQ-AZ-9iH" secondAttribute="trailing" id="XEj-3l-FfL"/>
+                            <constraint firstItem="Vys-Y4-yYX" firstAttribute="leading" secondItem="K7C-i2-rF6" secondAttribute="trailing" constant="43" id="bdx-vi-v4O"/>
+                            <constraint firstItem="bxs-PW-k1j" firstAttribute="leading" secondItem="dUQ-AZ-9iH" secondAttribute="leading" constant="52" id="cXw-ew-yGX"/>
+                            <constraint firstItem="K7C-i2-rF6" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="51" id="cbV-Hl-mmM"/>
+                            <constraint firstItem="Vys-Y4-yYX" firstAttribute="top" secondItem="dUQ-AZ-9iH" secondAttribute="top" constant="51" id="clI-qe-8z8"/>
+                            <constraint firstItem="8kk-WT-ECd" firstAttribute="bottom" secondItem="dUQ-AZ-9iH" secondAttribute="bottom" id="qwt-um-OwC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dUQ-AZ-9iH"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rW6-sD-Lo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ButtonTodaySick" width="122" height="99"/>
+        <image name="ButtonTodayVacation" width="980" height="942"/>
+        <image name="IconDate" width="44" height="44"/>
+    </resources>
+</document>

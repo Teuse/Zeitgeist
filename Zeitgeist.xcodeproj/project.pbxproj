@@ -18,13 +18,17 @@
 		33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */; };
 		33BF448F21C7CF930019FB7E /* TimeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF448E21C7CF930019FB7E /* TimeState.swift */; };
 		33BF449121C7D0EF0019FB7E /* TimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF449021C7D0EE0019FB7E /* TimeActions.swift */; };
-		8A29F67721F65A2F00D23A12 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A29F67621F65A2F00D23A12 /* History.storyboard */; };
-		8A29F67A21F65BC500D23A12 /* Recording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A29F67921F65BC500D23A12 /* Recording.storyboard */; };
-		8A29F67C21F65D7200D23A12 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29F67B21F65D7200D23A12 /* Recording.swift */; };
+		8A05372122041614000D64F1 /* RecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05371F22041614000D64F1 /* RecordingState.swift */; };
+		8A05372222041614000D64F1 /* RecordingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05372022041614000D64F1 /* RecordingActions.swift */; };
+		8A2201C522023880001621E2 /* RecordingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2201C422023880001621E2 /* RecordingButtons.swift */; };
+		8A270CF621FC8DD700A005F0 /* RecordSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A270CF521FC8DD700A005F0 /* RecordSummary.swift */; };
+		8A29F67721F65A2F00D23A12 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A29F67621F65A2F00D23A12 /* Calendar.storyboard */; };
+		8A29F67C21F65D7200D23A12 /* RecordTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29F67B21F65D7200D23A12 /* RecordTableView.swift */; };
 		8A3E864521BA557500AD9E38 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864421BA557500AD9E38 /* MapViewController.swift */; };
 		8A3E864921BA969800AD9E38 /* TimeProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864821BA969800AD9E38 /* TimeProcessor.swift */; };
 		8A3E864B21BA96A200AD9E38 /* LocationProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */; };
 		8A3E864D21BA991900AD9E38 /* WeekdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */; };
+		8A8093E622038C8B005DD278 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8093E522038C8B005DD278 /* ConfirmViewController.swift */; };
 		8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */; };
 		8A80EE7821B8504E00CAE80C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A80EE7721B8504E00CAE80C /* MapKit.framework */; };
 		8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFF7921B7020C001E1C6D /* AppDelegate.swift */; };
@@ -46,17 +50,23 @@
 		8A8AFFE721B71293001E1C6D /* Evomotiv.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE221B71292001E1C6D /* Evomotiv.png */; };
 		8A8AFFE821B71293001E1C6D /* EvomotivLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */; };
 		8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */; };
-		8A8AFFED21B727F6001E1C6D /* AppStateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */; };
 		8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */; };
 		8A8AFFF121B7C52D001E1C6D /* RecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */; };
 		8A8AFFF421B7C568001E1C6D /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */; };
 		8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AFFF521B7F466001E1C6D /* DateTimeStrings.swift */; };
+		8AB483A82204A75300536933 /* Pause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB483A72204A75300536933 /* Pause.swift */; };
 		8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */; };
+		8AC2B56822049AE20034DE61 /* CalendarActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2B56622049AE20034DE61 /* CalendarActions.swift */; };
+		8AC2B56922049AE20034DE61 /* CalendarState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2B56722049AE20034DE61 /* CalendarState.swift */; };
+		8AC2B56B2204A20C0034DE61 /* RecordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2B56A2204A20C0034DE61 /* RecordType.swift */; };
+		8AC2CDCE2205C1F60011E859 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC2CDCD2205C1F60011E859 /* TabBarController.swift */; };
 		8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */; };
 		8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7621BD4E14008B0F8D /* Time.swift */; };
 		8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC3D7821BD4E4E008B0F8D /* Week.swift */; };
-		8AE8935921F6ED34004B83FC /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8935821F6ED34004B83FC /* RecordingCell.swift */; };
+		8AE8935921F6ED34004B83FC /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8935821F6ED34004B83FC /* RecordCell.swift */; };
 		8AEDC36221F62D0A00DF92FB /* TimeRecording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDC36121F62D0A00DF92FB /* TimeRecording.storyboard */; };
+		8AEE4B2A2200254800A4F3DF /* RecordTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEE4B292200254800A4F3DF /* RecordTableView.storyboard */; };
+		8AEE4B2C220025E800A4F3DF /* RecordTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE4B2B220025E800A4F3DF /* RecordTextCell.swift */; };
 		8AF6414D21CC108E00F5326E /* SettingsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */; };
 		8AF8223421BE3AD900C4247E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8223321BE3AD900C4247E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
@@ -90,13 +100,17 @@
 		33BF448C21C7CF400019FB7E /* TimeTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		33BF448E21C7CF930019FB7E /* TimeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeState.swift; sourceTree = "<group>"; };
 		33BF449021C7D0EE0019FB7E /* TimeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeActions.swift; sourceTree = "<group>"; };
-		8A29F67621F65A2F00D23A12 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
-		8A29F67921F65BC500D23A12 /* Recording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recording.storyboard; sourceTree = "<group>"; };
-		8A29F67B21F65D7200D23A12 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		8A05371F22041614000D64F1 /* RecordingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingState.swift; sourceTree = "<group>"; };
+		8A05372022041614000D64F1 /* RecordingActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingActions.swift; sourceTree = "<group>"; };
+		8A2201C422023880001621E2 /* RecordingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtons.swift; sourceTree = "<group>"; };
+		8A270CF521FC8DD700A005F0 /* RecordSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSummary.swift; sourceTree = "<group>"; };
+		8A29F67621F65A2F00D23A12 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		8A29F67B21F65D7200D23A12 /* RecordTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableView.swift; sourceTree = "<group>"; };
 		8A3E864421BA557500AD9E38 /* MapViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864821BA969800AD9E38 /* TimeProcessor.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TimeProcessor.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A3E864A21BA96A200AD9E38 /* LocationProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProcessor.swift; sourceTree = "<group>"; };
 		8A3E864C21BA991900AD9E38 /* WeekdayViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = WeekdayViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
+		8A8093E522038C8B005DD278 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationSelectionViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8A80EE7721B8504E00CAE80C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8A8AFF7621B7020C001E1C6D /* Zeitgeist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zeitgeist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,17 +138,23 @@
 		8A8AFFE221B71292001E1C6D /* Evomotiv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Evomotiv.png; sourceTree = "<group>"; };
 		8A8AFFE321B71292001E1C6D /* EvomotivLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EvomotivLogo.png; sourceTree = "<group>"; };
 		8A8AFFEA21B715AE001E1C6D /* DBAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBAccess.swift; sourceTree = "<group>"; };
-		8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStateActions.swift; sourceTree = "<group>"; };
 		8A8AFFEE21B7BF8E001E1C6D /* Predicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicates.swift; sourceTree = "<group>"; };
 		8A8AFFF021B7C52D001E1C6D /* RecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF321B7C568001E1C6D /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		8A8AFFF521B7F466001E1C6D /* DateTimeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeStrings.swift; sourceTree = "<group>"; };
+		8AB483A72204A75300536933 /* Pause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pause.swift; sourceTree = "<group>"; };
 		8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LocationTriggerViewController.swift; sourceTree = "<group>"; tabWidth = 3; };
+		8AC2B56622049AE20034DE61 /* CalendarActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarActions.swift; sourceTree = "<group>"; };
+		8AC2B56722049AE20034DE61 /* CalendarState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarState.swift; sourceTree = "<group>"; };
+		8AC2B56A2204A20C0034DE61 /* RecordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordType.swift; sourceTree = "<group>"; };
+		8AC2CDCD2205C1F60011E859 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8ACC3D7421BCF405008B0F8D /* TriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = TriggerManager.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7621BD4E14008B0F8D /* Time.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; tabWidth = 3; };
 		8ACC3D7821BD4E4E008B0F8D /* Week.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; tabWidth = 3; };
-		8AE8935821F6ED34004B83FC /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		8AE8935821F6ED34004B83FC /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		8AEDC36121F62D0A00DF92FB /* TimeRecording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeRecording.storyboard; sourceTree = "<group>"; };
+		8AEE4B292200254800A4F3DF /* RecordTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordTableView.storyboard; sourceTree = "<group>"; };
+		8AEE4B2B220025E800A4F3DF /* RecordTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTextCell.swift; sourceTree = "<group>"; };
 		8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataSource.swift; sourceTree = "<group>"; };
 		8AF8223321BE3AD900C4247E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +202,8 @@
 				8ACC3D7621BD4E14008B0F8D /* Time.swift */,
 				8ACC3D7821BD4E4E008B0F8D /* Week.swift */,
 				337DB11A21D025CF00960CFB /* Coordinate.swift */,
+				8AC2B56A2204A20C0034DE61 /* RecordType.swift */,
+				8AB483A72204A75300536933 /* Pause.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -197,31 +219,22 @@
 			path = TriggerProcessor;
 			sourceTree = "<group>";
 		};
-		8A29F67521F659FB00D23A12 /* History */ = {
+		8A29F67521F659FB00D23A12 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				8A29F67621F65A2F00D23A12 /* History.storyboard */,
+				8A29F67621F65A2F00D23A12 /* Calendar.storyboard */,
 				8A8AFFC621B70980001E1C6D /* HistoryViewController.swift */,
+				8A270CF521FC8DD700A005F0 /* RecordSummary.swift */,
 			);
-			path = History;
-			sourceTree = "<group>";
-		};
-		8A29F67821F65BAB00D23A12 /* Recording */ = {
-			isa = PBXGroup;
-			children = (
-				8A29F67921F65BC500D23A12 /* Recording.storyboard */,
-				8A29F67B21F65D7200D23A12 /* Recording.swift */,
-				8AE8935821F6ED34004B83FC /* RecordingCell.swift */,
-			);
-			path = Recording;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		8A80EE7321B84C3E00CAE80C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				8AF8223321BE3AD900C4247E /* Settings.storyboard */,
 				8A8AFFC521B70980001E1C6D /* SettingsViewController.swift */,
 				8AF6414C21CC108E00F5326E /* SettingsDataSource.swift */,
-				8AF8223321BE3AD900C4247E /* Settings.storyboard */,
 				8ABC3C9621C80097001EA9B6 /* LocationTriggerViewController.swift */,
 				8A80EE7421B84C5900CAE80C /* LocationSelectionViewController.swift */,
 				8A3E864421BA557500AD9E38 /* MapViewController.swift */,
@@ -312,12 +325,13 @@
 		8A8AFFAF21B703D7001E1C6D /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				8AEE4B2821FF808400A4F3DF /* Components */,
 				8AEDC36021F62C0000DF92FB /* TimeRecording */,
-				8A29F67521F659FB00D23A12 /* History */,
+				8A29F67521F659FB00D23A12 /* Calendar */,
 				8A80EE7321B84C3E00CAE80C /* Settings */,
-				8A29F67821F65BAB00D23A12 /* Recording */,
 				8A8AFFB121B703D7001E1C6D /* Main.storyboard */,
 				8A8AFFB021B703D7001E1C6D /* RootViewController.swift */,
+				8AC2CDCD2205C1F60011E859 /* TabBarController.swift */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -328,7 +342,10 @@
 				33BF449521C9272D0019FB7E /* DataTypes */,
 				33BF449421C9271B0019FB7E /* Database */,
 				8A8AFFD821B70D96001E1C6D /* AppState.swift */,
-				8A8AFFEC21B727F6001E1C6D /* AppStateActions.swift */,
+				8A05371F22041614000D64F1 /* RecordingState.swift */,
+				8A05372022041614000D64F1 /* RecordingActions.swift */,
+				8AC2B56622049AE20034DE61 /* CalendarActions.swift */,
+				8AC2B56722049AE20034DE61 /* CalendarState.swift */,
 				332CE7D721C3E0380056B821 /* LocationState.swift */,
 				332CE7D421C3DB1B0056B821 /* LocationActions.swift */,
 				33BF448E21C7CF930019FB7E /* TimeState.swift */,
@@ -372,8 +389,21 @@
 			children = (
 				8AEDC36121F62D0A00DF92FB /* TimeRecording.storyboard */,
 				8A8AFFC421B70980001E1C6D /* TodayViewController.swift */,
+				8A8093E522038C8B005DD278 /* ConfirmViewController.swift */,
+				8A2201C422023880001621E2 /* RecordingButtons.swift */,
 			);
 			path = TimeRecording;
+			sourceTree = "<group>";
+		};
+		8AEE4B2821FF808400A4F3DF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE4B292200254800A4F3DF /* RecordTableView.storyboard */,
+				8A29F67B21F65D7200D23A12 /* RecordTableView.swift */,
+				8AE8935821F6ED34004B83FC /* RecordCell.swift */,
+				8AEE4B2B220025E800A4F3DF /* RecordTextCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,8 +522,8 @@
 				8AEDC36221F62D0A00DF92FB /* TimeRecording.storyboard in Resources */,
 				33883AA221CD0EB00010C2F7 /* SearchRadius.png in Resources */,
 				8A8AFFB521B703D7001E1C6D /* LaunchScreen.storyboard in Resources */,
-				8A29F67A21F65BC500D23A12 /* Recording.storyboard in Resources */,
-				8A29F67721F65A2F00D23A12 /* History.storyboard in Resources */,
+				8AEE4B2A2200254800A4F3DF /* RecordTableView.storyboard in Resources */,
+				8A29F67721F65A2F00D23A12 /* Calendar.storyboard in Resources */,
 				8A8AFFE721B71293001E1C6D /* Evomotiv.png in Resources */,
 				8A8AFFB621B703D7001E1C6D /* Assets.xcassets in Resources */,
 				8A8AFFE821B71293001E1C6D /* EvomotivLogo.png in Resources */,
@@ -553,17 +583,24 @@
 				332CE7D821C3E0380056B821 /* WeekdayState.swift in Sources */,
 				8A8AFFEB21B715AE001E1C6D /* DBAccess.swift in Sources */,
 				8A8AFFBA21B703D7001E1C6D /* Zeitgeist.xcdatamodeld in Sources */,
+				8A270CF621FC8DD700A005F0 /* RecordSummary.swift in Sources */,
 				33BF448D21C7CF410019FB7E /* TimeTriggerViewController.swift in Sources */,
 				337FC72821CEC93E007B4BF7 /* EnableTimeCell.swift in Sources */,
+				8AB483A82204A75300536933 /* Pause.swift in Sources */,
+				8A8093E622038C8B005DD278 /* ConfirmViewController.swift in Sources */,
+				8AEE4B2C220025E800A4F3DF /* RecordTextCell.swift in Sources */,
 				8A8AFFDD21B7101A001E1C6D /* UIViewControllerExtension.swift in Sources */,
 				8A8AFFD921B70D96001E1C6D /* AppState.swift in Sources */,
 				33BF449121C7D0EF0019FB7E /* TimeActions.swift in Sources */,
-				8A8AFFED21B727F6001E1C6D /* AppStateActions.swift in Sources */,
+				8AC2B56822049AE20034DE61 /* CalendarActions.swift in Sources */,
 				8A8AFFB821B703D7001E1C6D /* RootViewController.swift in Sources */,
 				337FC72721CEC93E007B4BF7 /* EnableLocationCell.swift in Sources */,
 				8A8AFFC921B70981001E1C6D /* HistoryViewController.swift in Sources */,
+				8A05372122041614000D64F1 /* RecordingState.swift in Sources */,
 				8A8AFFC821B70981001E1C6D /* SettingsViewController.swift in Sources */,
+				8AC2B56B2204A20C0034DE61 /* RecordType.swift in Sources */,
 				8AF6414D21CC108E00F5326E /* SettingsDataSource.swift in Sources */,
+				8AC2CDCE2205C1F60011E859 /* TabBarController.swift in Sources */,
 				8A8AFFF421B7C568001E1C6D /* CalendarExtension.swift in Sources */,
 				8A8AFFF121B7C52D001E1C6D /* RecordExtension.swift in Sources */,
 				332CE7D521C3DB1B0056B821 /* LocationActions.swift in Sources */,
@@ -573,14 +610,17 @@
 				8A8AFF7A21B7020C001E1C6D /* AppDelegate.swift in Sources */,
 				332CE7D921C3E0380056B821 /* LocationState.swift in Sources */,
 				8ACC3D7921BD4E4E008B0F8D /* Week.swift in Sources */,
-				8AE8935921F6ED34004B83FC /* RecordingCell.swift in Sources */,
+				8A05372222041614000D64F1 /* RecordingActions.swift in Sources */,
+				8AE8935921F6ED34004B83FC /* RecordCell.swift in Sources */,
 				33BF448F21C7CF930019FB7E /* TimeState.swift in Sources */,
 				8A8AFFDB21B70EE6001E1C6D /* LoggingMiddleware.swift in Sources */,
 				8A8AFFEF21B7BF8E001E1C6D /* Predicates.swift in Sources */,
 				8A8AFFF621B7F466001E1C6D /* DateTimeStrings.swift in Sources */,
-				8A29F67C21F65D7200D23A12 /* Recording.swift in Sources */,
+				8A29F67C21F65D7200D23A12 /* RecordTableView.swift in Sources */,
+				8A2201C522023880001621E2 /* RecordingButtons.swift in Sources */,
 				8ACC3D7521BCF406008B0F8D /* TriggerManager.swift in Sources */,
 				8ABC3C9721C80097001EA9B6 /* LocationTriggerViewController.swift in Sources */,
+				8AC2B56922049AE20034DE61 /* CalendarState.swift in Sources */,
 				8ACC3D7721BD4E14008B0F8D /* Time.swift in Sources */,
 				8A80EE7521B84C5900CAE80C /* LocationSelectionViewController.swift in Sources */,
 			);
